@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "target": "es5",
+    "outDir": "lib",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "baseUrl": "src",
+    "paths": {
+      "@/*": ["./src"]
+    },
+    "declaration": true,
+    "declarationDir": "lib",
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react",
+    "sourceMap": true,
+    "types": ["vite/client"]
+  },
+  "include": [
+    "./src/**/*.ts",
+    "./src/**/*.tsx",
+    "declaration.d.ts",
+  ],
+  "exclude": [
+    "dist",
+    "lib",
+    "cli/authenticator/**",
+    "plopfile.js",
+    "node_modules",
+    "**/*.test.tsx",
+    "**/*.stories.tsx"
+  ]
+}

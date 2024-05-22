@@ -1,0 +1,19 @@
+.anchor {
+  cursor: pointer;
+
+  &Underline {
+    text-decoration: underline;
+
+    &__none {
+      text-decoration: none;
+    }
+
+    &__hover {
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

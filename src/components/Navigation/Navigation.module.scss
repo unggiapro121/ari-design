@@ -1,0 +1,120 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.container {
+  transition: all 300ms ease-in-out;
+  background-color: $color-white;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  z-index: $z-index-navbar;
+
+  ul {
+    list-style-type: none;
+  }
+}
+
+.navigation {
+  transition: all 300ms ease-in-out;
+
+  @include xl {
+    height: 50px !important;
+    padding: 20px !important;
+  }
+
+  &Dark {
+    & a {
+      color: $color-white !important;
+    }
+
+    & img {
+      filter: brightness(0) invert(1);
+    }
+  }
+
+  &Container {
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    height: 100%;
+  }
+
+  &Left {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  &Right {
+    display: flex;
+    gap: 10px;
+
+    @include xl {
+      display: none;
+    }
+  }
+
+  &Logo {
+    display: flex;
+    flex-direction: column;
+    margin-right: 90px;
+    height: 100%;
+
+    @include xl {
+      margin-right: 0;
+    }
+
+    & > img {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &Links {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    @include xl {
+      display: none;
+    }
+  }
+
+  &Mobile {
+    display: none;
+
+    @include xl {
+      display: block;
+    }
+  }
+}
+
+.mobile {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &Links {
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &Actions {
+    display: flex;
+    padding: 20px;
+    margin: 0;
+    background-color: $color-blue;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.sticky {
+  box-shadow: 0 2px 100px 0 rgb(0 0 0 / 20%);
+  background-color: $color-white;
+  z-index: $z-index-navbar;
+}

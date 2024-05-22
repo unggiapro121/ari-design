@@ -1,0 +1,111 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+$slider-size: 27px;
+$slider-padding: 5px;
+
+.text,
+%text {
+  @include font-style(base);
+
+  transition: all 300ms ease-in-out;
+  font-size: 10px;
+  flex-grow: 1;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  line-height: 0;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  position: absolute;
+}
+
+.slider,
+%slider {
+  transition: all 300ms ease-in-out;
+  z-index: 1;
+  background-color: $color-white;
+  width: $slider-size;
+  height: $slider-size;
+}
+
+.toggle {
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &::before {
+    @extend %text;
+
+    content: 'YES';
+    color: $color-white;
+    margin-left: 8.5px;
+  }
+
+  &::after {
+    @extend %text;
+
+    content: 'NO';
+    color: $color-black-solid;
+    margin-right: 10px;
+    right: 0;
+  }
+
+  &Checkbox,
+  %toggleCheckbox {
+    appearance: none;
+    transition: all 300ms ease-in-out;
+    user-select: none;
+    width: 60px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    padding: $slider-padding;
+    background-color: $color-black-20;
+
+    @mixin color($color) {
+      @extend %toggleCheckbox;
+
+      &:checked {
+        background-color: $color;
+      }
+    }
+
+    &__red {
+      @include color($color-red);
+    }
+
+    &__blue {
+      @include color($color-blue);
+    }
+
+    &__black {
+      @include color($color-black);
+    }
+
+    &__cobalt {
+      @include color($color-cobalt);
+    }
+
+    &::before {
+      @extend %slider;
+
+      content: '';
+    }
+
+    &:checked {
+      @extend %toggleCheckbox;
+
+      &::before {
+        @extend %text;
+
+        content: '';
+        margin-left: $slider-size - $slider-padding;
+      }
+    }
+  }
+}

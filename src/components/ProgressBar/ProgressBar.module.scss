@@ -1,0 +1,104 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+$color-progress-bar-default: $color-black-20;
+$color-progress-bar-progress: $color-blue;
+
+@mixin createChildWidths($count) {
+  @for $i from 1 through $count {
+    li:nth-last-child(n+#{$i}),
+    li:nth-last-child(n+#{$i}):first-child ~ li {
+      width: calc(100% / $i);
+    }
+  }
+}
+
+.progressbar {
+  @include font-style(small);
+
+  @include min-md {
+    @include font-style(base);
+  }
+
+  background-color: $color-progress-bar-default;
+  height: 12px;
+  margin-bottom: 90px;
+
+  &Filler {
+    height: 12px;
+    width: 75%;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      background-color: $color-progress-bar-progress;
+      animation: slide 1s ease-in-out;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &Steps {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin: $spacing-xs;
+    padding: 0;
+
+    @include createChildWidths(6);
+  }
+
+  &Step {
+    position: relative;
+    text-align: center;
+    opacity: 0.75;
+    color: $color-black;
+
+    &Contain {
+      text-overflow: ellipsis;
+      overflow-x: hidden;
+    }
+
+    &__active {
+      opacity: 1;
+
+      &::before {
+        content: '';
+        position: absolute;
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+        border-top: 5px solid $color-progress-bar-progress;
+        top: -12px;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: slide-triangle 1s ease-in-out;
+        z-index: $z-index-background;
+      }
+    }
+  }
+}
+
+.visuallyHidden {
+  @include visually-hidden;
+}
+
+@keyframes slide-triangle {
+  0% {
+    transform: translateY(-7px) translateX(-50%);
+  }
+
+  100% {
+    transform: translateY(0) translateX(-50%);
+  }
+}
+
+@keyframes slide {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}

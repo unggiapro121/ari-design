@@ -1,0 +1,182 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+$border-size: 2px;
+
+@mixin colorVariant(
+  $background,
+  $background-hover,
+  $color: $background,
+  $color-hover: $color
+) {
+  position: relative;
+  background: $background;
+  border-color: $background;
+  color: $color;
+
+  &:visited {
+    color: $color;
+  }
+
+  &::after {
+    background: $background;
+  }
+
+  &:hover:not([class*='__inactive']) {
+    background-color: $background-hover;
+    border-color: $background-hover;
+    color: $color-hover;
+
+    &::after {
+      background: $background-hover;
+    }
+  }
+}
+
+@mixin hoverVariant($background, $color) {
+  &:hover:not([class*='__inactive']) {
+    @if $background != '' {
+      background-color: $background;
+    }
+
+    @if $color != '' {
+      color: $color;
+    }
+  }
+}
+
+.button {
+  @include font-style(no1);
+
+  line-height: 1;
+  box-sizing: border-box;
+  user-select: none;
+  width: 300px;
+  height: 48px;
+  margin: 0;
+  padding: 12px 50px;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  display: flex;
+  gap: 6px;
+  flex-shrink: 1;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  white-space: nowrap;
+  overflow: hidden;
+  text-decoration: none;
+  font-family: inherit;
+
+  @include sm {
+    width: 100%;
+  }
+
+  &Spinner {
+    position: absolute;
+    right: 0;
+    font-size: 24px;
+    margin-right: $spacing-xs;
+  }
+
+  &__red {
+    @include colorVariant($color-red, $color-red-hover);
+  }
+
+  &__blue {
+    @include colorVariant($color-blue, $color-blue-hover);
+  }
+
+  &__black {
+    @include colorVariant($color-black, $color-black-hover);
+  }
+
+  &__cobalt {
+    @include colorVariant($color-cobalt, $color-cobalt-hover);
+  }
+
+  &__white {
+    @include colorVariant($color-white, $color-white);
+  }
+
+  &__inactive {
+    opacity: 0.5;
+    cursor: auto;
+  }
+
+  &__primary {
+    @include hoverVariant('', $color-white);
+
+    border: none;
+    color: $color-white;
+
+    &:visited {
+      color: $color-white;
+    }
+
+    &.button__white {
+      @include hoverVariant('', $color-black);
+
+      color: $color-black;
+
+      &:visited {
+        color: $color-black;
+      }
+    }
+  }
+
+  &__secondary {
+    @include hoverVariant($color-white, '');
+
+    border-width: 2px;
+    border-style: solid;
+    background: $color-white;
+
+    &.button__white {
+      @include hoverVariant(transparent, '');
+
+      color: $color-white;
+      background: transparent;
+
+      &:visited {
+        color: $color-white;
+      }
+    }
+  }
+
+  &__tertiary {
+    @include hoverVariant($color-white, $color-black);
+
+    width: auto;
+    padding: 12px 0;
+    background: transparent;
+    color: $color-black;
+
+    &:where(a) {
+      display: inline-flex;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 11px;
+      width: 100%;
+      height: 2px;
+    }
+
+    &.button__white {
+      @include hoverVariant(transparent, '');
+
+      color: $color-white;
+    }
+
+    &:hover:not([class*='__inactive']) {
+      background-color: transparent;
+    }
+  }
+
+  &__noFill {
+    background-color: transparent;
+  }
+}

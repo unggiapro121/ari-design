@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>e-Digital</title>
+    <g id="Project-Connect-[WIP]" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="AmpolCard-Icons" transform="translate(-492.000000, -333.000000)">
+            <g id="e-Digital" transform="translate(492.000000, 333.000000)">
+                <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+                <g transform="translate(0.500000, 0.500000)" fill-rule="nonzero">
+                    <circle id="Oval" fill="#ED0C06" cx="11.5" cy="11.5" r="11.5"></circle>
+                    <path d="M11.40997,7 C8.8,7 7,8.872 7,11.617 C7,14.362 8.854,16.18 11.52697,16.18 C12.99397,16.18 14.25397,15.766 15.24397,14.857 L13.86697,13.345 C13.23697,13.876 12.41797,14.182 11.66197,14.182 C10.55497,14.182 9.673,13.633 9.421,12.373 L15.60397,12.373 C15.63097,12.175 15.64897,11.851 15.64897,11.581 C15.63997,8.863 13.92097,7 11.40997,7 Z M11.39197,9.025 C12.39997,9.025 13.07497,9.655 13.29097,10.771 L9.43,10.771 C9.637,9.691 10.28497,9.025 11.39197,9.025 Z" id="Shape" fill="#FFFFFF"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

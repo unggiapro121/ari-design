@@ -1,0 +1,223 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.dropdownsearchIcon {
+  width: 25px;
+  height: 25px;
+  background-position: center;
+  background-repeat: no-repeat;
+  right: 0;
+  margin: $spacing-xs;
+  position: absolute;
+  pointer-events: none;
+  border: none;
+  background-color: transparent;
+
+  &__clear {
+    background-image: url('../../images/icons/icon-close.svg');
+    pointer-events: all;
+  }
+
+  &__dropdown {
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m6 10 6 6 6-6' stroke='%23222' stroke-width='2' fill='none' fill-rule='evenodd' stroke-linecap='square'/%3E%3C/svg%3E");
+  }
+
+  &__search {
+    background-image: url('../../images/icons/icon-search.svg');
+  }
+}
+
+.dropdownsearch {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+
+  &SelectedIcon {
+    background-image: url('../../images/icons/icon-tick.svg');
+    width: 24px;
+    height: 24px;
+  }
+
+  &RemoveIcon {
+    background-color: $color-black;
+    mask-image: url('../../images/icons/icon-close.svg');
+    width: 24px;
+    height: 24px;
+
+    &__clear {
+      background-color: $color-red;
+    }
+  }
+
+  &Footer {
+    align-content: flex-start;
+    background: $color-blue-10;
+    border: 1px solid $color-black-10;
+    padding: 12px;
+  }
+
+  &Button {
+    @include link-button;
+
+    margin-top: 12px;
+    color: $color-blue;
+  }
+
+  &Loading {
+    position: absolute;
+    margin: 0 auto;
+    top: 46px;
+    left: 0;
+    right: 0;
+  }
+
+  &Input {
+    padding: 0;
+  }
+
+  // this will apply eliipsis for dropdown selected option
+  &TextOverflow {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  &NoContent {
+    @include font-style(base);
+
+    color: $color-black;
+    padding: 16px 20px 14px;
+  }
+
+  &Group {
+    box-sizing: border-box;
+    padding: 12px;
+    color: $color-black;
+    background-color: $color-black-10;
+    font-style: italic;
+    width: 100%;
+    display: inline-block;
+
+    &__tier2 {
+      padding-left: 18px !important;
+    }
+  }
+
+  &GroupItem {
+    @extend %dropdownsearchItem;
+
+    &__tier2 {
+      padding-left: 24px !important;
+    }
+  }
+}
+
+%dropdownsearchItem,
+.dropdownsearchItem {
+  margin: 0 !important;
+  padding: $spacing-xs $spacing-xxs;
+  display: flex;
+  align-items: center;
+  border-radius: 0 !important;
+}
+
+.dropdownsearchTag {
+  background-color: $color-white;
+  border: 1px solid $color-black-10;
+  border-radius: 2px;
+  height: 100%;
+  padding: 1px $spacing-xxs;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+
+  button {
+    cursor: pointer;
+    background-color: $color-black;
+    mask-image: url('../../images/icons/icon-close.svg');
+    width: 24px;
+    height: 24px;
+    margin-left: $spacing-xxs;
+  }
+}
+
+.antddropdownsearchSelect {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  outline: none;
+  border: none;
+  box-shadow: none;
+  margin-top: 2px;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+  // Weird fix for the dropdown when select multiple is enabled
+  & > * {
+    width: 100%;
+    height: 100%;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  [class*='ant-select-selector'] {
+    padding-right: 34px !important;
+    min-height: 35px !important;
+
+    @include font-style(input);
+  }
+}
+
+.antddropdownsearchSelectPopup {
+  border: 2px solid $color-black-10;
+  border-top: 2px solid $color-black !important;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+  max-height: 300px;
+  background-color: $color-white;
+
+  ::-webkit-scrollbar {
+    appearance: none;
+    width: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: $color-black-20;
+  }
+
+  [class~='ant-select-item-group'],
+  [class~='ant-select-item-option'] {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+  }
+
+  [class~='ant-select-item-group'] {
+    padding: 0;
+  }
+
+  [class~='ant-select-item-group'],
+  [class~='ant-select-item-option-content'] {
+    @include font-style(base);
+  }
+
+  [class~='ant-select-item-option-selected']:not([class~='ant-select-item-option-disabled']) {
+    background-color: $color-background-light;
+  }
+}
+
+// this will display full text of dropdown options
+.antddropdownsearchSelectOptionsOverflowNormal {
+  [class~='ant-select-item-option-content'] {
+    overflow: auto;
+    white-space: normal;
+  }
+}

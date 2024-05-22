@@ -1,0 +1,65 @@
+@import 'variables';
+@import 'mixins';
+
+h1,
+.h1 {
+  @include font-style(h1);
+}
+
+h2,
+.h2 {
+  @include font-style(h2);
+}
+
+h3,
+.h3 {
+  @include font-style(h3);
+}
+
+h4,
+.h4 {
+  @include font-style(h4);
+}
+
+.quote {
+  @include font-style(quote);
+}
+
+html,
+body,
+p,
+button {
+  @include font-style(base);
+}
+
+a {
+  @include font-style(link);
+}
+
+label {
+  @include font-style(label);
+}
+
+input {
+  @include font-style(input);
+}
+
+.nav {
+  @include font-style(nav);
+}
+
+.small {
+  @include font-style(small);
+}
+
+.no1 {
+  @include font-style(no1);
+}
+
+.no2 {
+  @include font-style(no2);
+}
+
+.no3 {
+  @include font-style(no3);
+}

@@ -1,0 +1,36 @@
+@import 'css-variables';
+@import 'variables';
+@import 'mixins';
+@import 'font-faces';
+@import 'typography';
+@import 'functions';
+@import 'preflight';
+
+* {
+  font-family: 'MarkOT-Book', 'MarkOT-Book Fallback', sans-serif;
+}
+
+body {
+  margin: 0;
+  background: $color-white;
+}
+
+p,
+a {
+  @include font-style(base);
+
+  margin: 12px 0;
+}
+
+a {
+  color: $color-black;
+
+  &:hover,
+  &:visited {
+    color: $color-black;
+  }
+}
+
+small {
+  @include font-style(small);
+}

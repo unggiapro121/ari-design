@@ -1,0 +1,93 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+$cta-img-max-size-sm: 360px;
+$cta-height-md: 360px;
+
+.block {
+  @include content-block(centered);
+
+  &__white {
+    color: $color-white;
+  }
+
+  &__bgRed {
+    background-color: $color-red;
+  }
+
+  &__bgBlue {
+    background-color: $color-blue;
+  }
+
+  &__bgCobalt {
+    background-color: $color-cobalt;
+  }
+
+  @include min-md {
+    height: $cta-height-md;
+
+    &__bgImage {
+      background-image: var(--bg-img-url);
+      background-position: center;
+      background-size: cover;
+    }
+  }
+}
+
+.cta {
+  @include content-block-container;
+  @include content-block-inner;
+  @include my(calc(2 * $content-gutter-lg));
+
+  &Image {
+    height: auto;
+    margin-bottom: var(--spacing-m);
+    max-width: $cta-img-max-size-sm;
+    width: 100%;
+
+    @include min-md {
+      display: none;
+    }
+  }
+
+  &Heading {
+    margin: 0;
+  }
+
+  &Button {
+    margin-top: var(--spacing-l);
+
+    @include min-sm {
+      display: inline-block;
+    }
+  }
+
+  @include min-md {
+    @include my(initial);
+  }
+
+  @include min-xl {
+    &2col {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 100%;
+      text-align: left;
+      max-width: 100%;
+
+      .ctaContent {
+        max-width: 50%;
+      }
+
+      .ctaButton {
+        margin: 0;
+      }
+    }
+
+    &__before {
+      .ctaButton {
+        order: -1;
+      }
+    }
+  }
+}

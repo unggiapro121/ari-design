@@ -1,0 +1,89 @@
+$font-weights: (
+  light: 300,
+  normal: 400,
+  bold: 500,
+  bolder: 600
+);
+
+$font-styles: (
+  base: (
+    font-size: 16px,
+    line-height: 24px,
+    font-weight: map-get($font-weights, normal),
+  ),
+  h1: (
+    font-size: 48px,
+    line-height: 60px,
+    font-weight: map-get($font-weights, normal),
+    mobile-font-size: 32px,
+    mobile-line-height: 48px
+  ),
+  h2: (
+    font-size: 32px,
+    line-height: 48px,
+    font-weight: map-get($font-weights, normal),
+    mobile-font-size: 24px,
+    mobile-line-height: 36px
+  ),
+  h3: (
+    font-size: 24px,
+    line-height: 36px,
+    font-weight: map-get($font-weights, normal),
+    mobile-font-size: 16px,
+    mobile-line-height: 24px
+  ),
+  h4: (
+    font-size: 16px,
+    line-height: 24px,
+    font-weight: map-get($font-weights, normal),
+    mobile-font-size: 12px,
+    mobile-line-height: 24px
+  ),
+  quote: (
+    font-size: 24px,
+    line-height: 32px,
+    font-weight: map-get($font-weights, normal),
+    mobile-font-size: 16px,
+    mobile-line-height: 24px
+  ),
+  small: (
+    font-size: 12px,
+    line-height: 24px,
+    font-weight: map-get($font-weights, normal),
+  ),
+  link: (
+    font-size: 16px,
+    line-height: 24px,
+    font-weight: map-get($font-weights, normal),
+  ),
+  label: (
+    font-size: 12px,
+    line-height: 24px,
+    font-weight: map-get($font-weights, normal),
+  ),
+  input: (
+    font-size: 16px,
+    line-height: 24px,
+    font-weight: map-get($font-weights, normal),
+  ),
+  nav: (
+    font-size: 16px,
+    line-height: 24px,
+    font-weight: map-get($font-weights, normal),
+  ),
+  no1: (
+    font-size: 16px,
+    line-height: 24px,
+    font-weight: map-get($font-weights, normal),
+  ),
+  no2: (
+    font-size: 14px,
+    line-height: 24px,
+    font-weight: map-get($font-weights, normal),
+  ),
+  no3: (
+    font-size: 10px,
+    line-height: 24px,
+    font-weight: map-get($font-weights, normal)
+  )
+);

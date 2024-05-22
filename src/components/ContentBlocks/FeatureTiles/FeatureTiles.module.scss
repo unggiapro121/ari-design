@@ -1,0 +1,223 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+$tile-bg-square: var(--bg-image-square);
+$tile-bg-wide: var(--bg-image-wide, var(--bg-image-square));
+$tile-gap-default: $spacing-xs;
+$tile-gap-overlay: 3px;
+$tile-height-image: 300px;
+$tile-height-sm-overlay: 500px;
+$tile-height-xl: 720px;
+$tile-image-height: 300px;
+$tile-double-flex-basis: 50%;
+$tile-triple-flex-basis: 33.33%;
+$tile-content-bg-transparency: rgba(255 255 255/85%);
+$tile-content-inset: $spacing-m;
+$tile-content-padding-sm: $spacing-s;
+$tile-content-padding-lg: $spacing-m;
+$tile-content-height: 372px;
+$tile-overlay-content-height: 212px;
+
+@mixin multiCol {
+  display: flex;
+  flex-wrap: wrap;
+
+  .tile + .tile {
+    margin-top: initial;
+  }
+}
+
+.featureTiles {
+  --feature-tiles-gap: #{$tile-gap-default};
+
+  gap: var(--feature-tiles-gap);
+
+  &__overlay {
+    --feature-tiles-gap: 0;
+
+    .tile {
+      height: $tile-height-sm-overlay;
+      position: relative;
+    }
+
+    .tile + .tile {
+      margin-top: initial;
+    }
+
+    .tileImage {
+      height: 100%;
+    }
+
+    .tileLayout {
+      position: absolute;
+      bottom: 0;
+    }
+
+    .tileContent {
+      background-color: $tile-content-bg-transparency;
+      width: 100%;
+    }
+  }
+
+  &__x1 {
+    .tileContent {
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  @include min-md {
+    .tileImage {
+      background-image: $tile-bg-wide;
+    }
+
+    &__overlay .tileLayout {
+      padding: 0 $tile-content-inset;
+    }
+
+    &__x1:is(&__overlay) .tileLayout {
+      max-width: 1200px;
+    }
+
+    &__x4:is(&__overlay),
+    &__x5:is(&__overlay) {
+      --feature-tiles-gap: #{$tile-gap-overlay};
+
+      .tileLayout {
+        margin-bottom: $tile-content-inset;
+      }
+
+      .tileContent {
+        min-height: calc($tile-overlay-content-height - $tile-content-inset);
+      }
+    }
+
+    &__overlay .tileContent {
+      min-height: $tile-overlay-content-height;
+    }
+  }
+
+  @include min-lg {
+    &__x1 .tileLayout {
+      margin-left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &__x2,
+    &__x4 {
+      .tile {
+        flex-basis: calc(#{$tile-double-flex-basis} - var(--feature-tiles-gap));
+      }
+
+      .tileImage {
+        background-image: $tile-bg-square;
+      }
+
+      @include multiCol;
+    }
+
+    &__x2:not(&__overlay),
+    &__x4:not(&__overlay) {
+      .tileContent {
+        height: $tile-content-height;
+      }
+    }
+  }
+
+  @include min-xl {
+    &__overlay {
+      .tile {
+        height: $tile-height-xl;
+      }
+    }
+
+    &__x2:not(&__overlay),
+    &__x4:not(&__overlay) {
+      .tileImage {
+        background-image: $tile-bg-wide;
+      }
+    }
+
+    &__x3,
+    &__x5 {
+      .tile {
+        flex-basis: calc(#{$tile-triple-flex-basis} - var(--feature-tiles-gap));
+      }
+
+      .tileImage {
+        background-image: $tile-bg-square;
+      }
+
+      @include multiCol;
+    }
+
+    &__x3:not(&__overlay),
+    &__x5:not(&__overlay) {
+      .tileContent {
+        height: $tile-content-height;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 1800px) {
+    &__x3:not(&__overlay) {
+      .tileImage {
+        background-image: $tile-bg-wide;
+      }
+    }
+  }
+}
+
+.tile {
+  flex-grow: 1;
+
+  & + & {
+    margin-top: $spacing-xs;
+  }
+
+  &Image {
+    background-image: $tile-bg-square;
+    background-position: 50%;
+    background-size: cover;
+    height: $tile-image-height;
+  }
+
+  &Layout {
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  &Content {
+    background-color: $color-background-light;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: $tile-content-padding-sm;
+
+    @include min-lg {
+      padding: $tile-content-padding-lg;
+    }
+  }
+
+  &Headline {
+    $headline-style: map-get($font-styles, h3);
+
+    font-size: map-get($headline-style, font-size);
+    line-height: map-get($headline-style, line-height);
+    margin: 0;
+  }
+
+  &Description {
+    margin-bottom: 0;
+    flex-grow: 1;
+  }
+
+  &Cta {
+    margin-top: $spacing-s;
+    width: 100%;
+
+    @include min-sm {
+      width: initial;
+    }
+  }
+}

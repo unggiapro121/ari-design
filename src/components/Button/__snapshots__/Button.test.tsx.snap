@@ -1,0 +1,11 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Button component > does render correctly 1`] = `
+<button
+  className="_button_f8f296 _button__red_f8f296 _button__primary_f8f296"
+  data-testid="Button"
+  type="button"
+>
+  Test
+</button>
+`;

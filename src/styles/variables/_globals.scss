@@ -1,0 +1,51 @@
+// Spacing
+$spacing-xxs: var(--spacing-xxs);
+$spacing-xs: var(--spacing-xs);
+$spacing-s: var(--spacing-s);
+$spacing-m: var(--spacing-m);
+$spacing-l: var(--spacing-l);
+
+// Content layout
+$content-gutter-sm: var(--content-gutter-sm);
+$content-gutter-md: var(--content-gutter-md);
+$content-gutter-lg: var(--content-gutter-lg);
+$content-gutter-xl: var(--content-gutter-xl);
+$content-max-width: var(--content-max-width);
+$content-inset-max-width: var(--content-inset-max-width);
+$page-gutter-sm: var(--page-gutter-sm);
+$page-gutter-md: var(--page-gutter-md);
+$page-gutter-lg: var(--page-gutter-lg);
+
+// Screen beak points
+$screen-xs: 0;
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+$screen-xxl: 1400px;
+
+// Z-Index
+$z-index-background: -1;
+$z-index-dropdown: 100;
+$z-index-sticky: 200;
+$z-index-navbar: 300;
+$z-index-modal: 400;
+$z-index-toast: 500;
+
+// Variable Lists
+$spacings: (
+  xxs: $spacing-xxs,
+  xs: $spacing-xs,
+  s: $spacing-s,
+  m: $spacing-m,
+  l: $spacing-l,
+);
+
+$breakpoints: (
+  xs: $screen-xs,
+  sm: $screen-sm,
+  md: $screen-md,
+  lg: $screen-lg,
+  xl: $screen-xl,
+  xxl: $screen-xxl,
+);

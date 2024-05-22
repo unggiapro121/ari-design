@@ -1,0 +1,836 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Carousel component > snapshot of story 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        data-testid="Carousel"
+      >
+        <div
+          aria-roledescription="carousel"
+          class="splide _carousel_e10190 splide--loop splide--ltr splide--draggable is-active is-initialized"
+          id="splide02"
+          role="region"
+        >
+          <div
+            aria-atomic="true"
+            aria-live="polite"
+            class="splide__track splide__track--loop splide__track--ltr splide__track--draggable"
+            id="splide02-track"
+            style="padding-left: 0px; padding-right: 0px;"
+          >
+            <ul
+              class="splide__list"
+              id="splide02-list"
+              role="presentation"
+              style="transform: translateX(0px);"
+            >
+              <li
+                aria-label="1 of 4"
+                aria-roledescription="slide"
+                class="splide__slide splide__slide--clone is-active is-visible"
+                id="splide02-clone01"
+                role="tabpanel"
+              >
+                <div
+                  style="width: 640px; max-width: 100vw;"
+                >
+                  <div
+                    class="_card_d75732 undefined"
+                    data-testid="Card"
+                  >
+                    <h1>
+                      Card 1
+                    </h1>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit, 
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li
+                aria-label="2 of 4"
+                aria-roledescription="slide"
+                class="splide__slide splide__slide--clone is-visible"
+                id="splide02-clone02"
+                role="tabpanel"
+              >
+                <div
+                  style="width: 640px; max-width: 100vw;"
+                >
+                  <div
+                    class="_card_d75732 undefined"
+                    data-testid="Card"
+                  >
+                    <h1>
+                      Card 2
+                    </h1>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit, 
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li
+                aria-label="3 of 4"
+                aria-roledescription="slide"
+                class="splide__slide splide__slide--clone is-visible"
+                id="splide02-clone03"
+                role="tabpanel"
+              >
+                <div
+                  style="width: 640px; max-width: 100vw;"
+                >
+                  <div
+                    class="_card_d75732 undefined"
+                    data-testid="Card"
+                  >
+                    <h1>
+                      Card 3
+                    </h1>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit, 
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li
+                aria-label="4 of 4"
+                aria-roledescription="slide"
+                class="splide__slide splide__slide--clone is-visible is-prev"
+                id="splide02-clone04"
+                role="tabpanel"
+              >
+                <div
+                  style="width: 640px; max-width: 100vw;"
+                >
+                  <div
+                    class="_card_d75732 undefined"
+                    data-testid="Card"
+                  >
+                    <h1>
+                      Card 4
+                    </h1>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit, 
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li
+                aria-label="1 of 4"
+                aria-roledescription="slide"
+                class="splide__slide is-active is-visible"
+                id="splide02-slide01"
+                role="tabpanel"
+              >
+                <div
+                  style="width: 640px; max-width: 100vw;"
+                >
+                  <div
+                    class="_card_d75732 undefined"
+                    data-testid="Card"
+                  >
+                    <h1>
+                      Card 1
+                    </h1>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit, 
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li
+                aria-label="2 of 4"
+                aria-roledescription="slide"
+                class="splide__slide is-visible is-next"
+                id="splide02-slide02"
+                role="tabpanel"
+              >
+                <div
+                  style="width: 640px; max-width: 100vw;"
+                >
+                  <div
+                    class="_card_d75732 undefined"
+                    data-testid="Card"
+                  >
+                    <h1>
+                      Card 2
+                    </h1>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit, 
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li
+                aria-label="3 of 4"
+                aria-roledescription="slide"
+                class="splide__slide is-visible"
+                id="splide02-slide03"
+                role="tabpanel"
+              >
+                <div
+                  style="width: 640px; max-width: 100vw;"
+                >
+                  <div
+                    class="_card_d75732 undefined"
+                    data-testid="Card"
+                  >
+                    <h1>
+                      Card 3
+                    </h1>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit, 
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li
+                aria-label="4 of 4"
+                aria-roledescription="slide"
+                class="splide__slide is-visible"
+                id="splide02-slide04"
+                role="tabpanel"
+              >
+                <div
+                  style="width: 640px; max-width: 100vw;"
+                >
+                  <div
+                    class="_card_d75732 undefined"
+                    data-testid="Card"
+                  >
+                    <h1>
+                      Card 4
+                    </h1>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit, 
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li
+                aria-label="1 of 4"
+                aria-roledescription="slide"
+                class="splide__slide splide__slide--clone is-active is-visible"
+                id="splide02-clone05"
+                role="tabpanel"
+              >
+                <div
+                  style="width: 640px; max-width: 100vw;"
+                >
+                  <div
+                    class="_card_d75732 undefined"
+                    data-testid="Card"
+                  >
+                    <h1>
+                      Card 1
+                    </h1>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit, 
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li
+                aria-label="2 of 4"
+                aria-roledescription="slide"
+                class="splide__slide splide__slide--clone is-visible"
+                id="splide02-clone06"
+                role="tabpanel"
+              >
+                <div
+                  style="width: 640px; max-width: 100vw;"
+                >
+                  <div
+                    class="_card_d75732 undefined"
+                    data-testid="Card"
+                  >
+                    <h1>
+                      Card 2
+                    </h1>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit, 
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li
+                aria-label="3 of 4"
+                aria-roledescription="slide"
+                class="splide__slide splide__slide--clone is-visible"
+                id="splide02-clone07"
+                role="tabpanel"
+              >
+                <div
+                  style="width: 640px; max-width: 100vw;"
+                >
+                  <div
+                    class="_card_d75732 undefined"
+                    data-testid="Card"
+                  >
+                    <h1>
+                      Card 3
+                    </h1>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit, 
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li
+                aria-label="4 of 4"
+                aria-roledescription="slide"
+                class="splide__slide splide__slide--clone is-visible"
+                id="splide02-clone08"
+                role="tabpanel"
+              >
+                <div
+                  style="width: 640px; max-width: 100vw;"
+                >
+                  <div
+                    class="_card_d75732 undefined"
+                    data-testid="Card"
+                  >
+                    <h1>
+                      Card 4
+                    </h1>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit, 
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="_arrowContainer_e10190 splide__arrows splide__arrows--ltr"
+          >
+            <button
+              aria-controls="splide02-track"
+              aria-label="Go to last slide"
+              class="_arrowPrev_e10190 splide__arrow splide__arrow--prev"
+            >
+              <img
+                alt=""
+                aria-hidden="true"
+                height="24"
+                src="/src/images/icons/icon-chevron-right.svg"
+                width="24"
+              />
+            </button>
+            <button
+              aria-controls="splide02-track"
+              aria-label="Next slide"
+              class="_arrowNext_e10190 splide__arrow splide__arrow--next"
+            >
+              <img
+                alt=""
+                aria-hidden="true"
+                height="24"
+                src="/src/images/icons/icon-chevron-right.svg"
+                width="24"
+              />
+            </button>
+          </div>
+          <ul
+            aria-label="Select a slide to show"
+            class="splide__pagination splide__pagination--ltr"
+            role="tablist"
+          >
+            <li
+              role="presentation"
+            >
+              <button
+                aria-controls="splide02-slide01"
+                aria-label="Go to slide 1"
+                aria-selected="true"
+                class="splide__pagination__page is-active"
+                role="tab"
+                type="button"
+              />
+            </li>
+            <li
+              role="presentation"
+            >
+              <button
+                aria-controls="splide02-slide02"
+                aria-label="Go to slide 2"
+                class="splide__pagination__page"
+                role="tab"
+                tabindex="-1"
+                type="button"
+              />
+            </li>
+            <li
+              role="presentation"
+            >
+              <button
+                aria-controls="splide02-slide03"
+                aria-label="Go to slide 3"
+                class="splide__pagination__page"
+                role="tab"
+                tabindex="-1"
+                type="button"
+              />
+            </li>
+            <li
+              role="presentation"
+            >
+              <button
+                aria-controls="splide02-slide04"
+                aria-label="Go to slide 4"
+                class="splide__pagination__page"
+                role="tab"
+                tabindex="-1"
+                type="button"
+              />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      data-testid="Carousel"
+    >
+      <div
+        aria-roledescription="carousel"
+        class="splide _carousel_e10190 splide--loop splide--ltr splide--draggable is-active is-initialized"
+        id="splide02"
+        role="region"
+      >
+        <div
+          aria-atomic="true"
+          aria-live="polite"
+          class="splide__track splide__track--loop splide__track--ltr splide__track--draggable"
+          id="splide02-track"
+          style="padding-left: 0px; padding-right: 0px;"
+        >
+          <ul
+            class="splide__list"
+            id="splide02-list"
+            role="presentation"
+            style="transform: translateX(0px);"
+          >
+            <li
+              aria-label="1 of 4"
+              aria-roledescription="slide"
+              class="splide__slide splide__slide--clone is-active is-visible"
+              id="splide02-clone01"
+              role="tabpanel"
+            >
+              <div
+                style="width: 640px; max-width: 100vw;"
+              >
+                <div
+                  class="_card_d75732 undefined"
+                  data-testid="Card"
+                >
+                  <h1>
+                    Card 1
+                  </h1>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit, 
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li
+              aria-label="2 of 4"
+              aria-roledescription="slide"
+              class="splide__slide splide__slide--clone is-visible"
+              id="splide02-clone02"
+              role="tabpanel"
+            >
+              <div
+                style="width: 640px; max-width: 100vw;"
+              >
+                <div
+                  class="_card_d75732 undefined"
+                  data-testid="Card"
+                >
+                  <h1>
+                    Card 2
+                  </h1>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit, 
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li
+              aria-label="3 of 4"
+              aria-roledescription="slide"
+              class="splide__slide splide__slide--clone is-visible"
+              id="splide02-clone03"
+              role="tabpanel"
+            >
+              <div
+                style="width: 640px; max-width: 100vw;"
+              >
+                <div
+                  class="_card_d75732 undefined"
+                  data-testid="Card"
+                >
+                  <h1>
+                    Card 3
+                  </h1>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit, 
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li
+              aria-label="4 of 4"
+              aria-roledescription="slide"
+              class="splide__slide splide__slide--clone is-visible is-prev"
+              id="splide02-clone04"
+              role="tabpanel"
+            >
+              <div
+                style="width: 640px; max-width: 100vw;"
+              >
+                <div
+                  class="_card_d75732 undefined"
+                  data-testid="Card"
+                >
+                  <h1>
+                    Card 4
+                  </h1>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit, 
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li
+              aria-label="1 of 4"
+              aria-roledescription="slide"
+              class="splide__slide is-active is-visible"
+              id="splide02-slide01"
+              role="tabpanel"
+            >
+              <div
+                style="width: 640px; max-width: 100vw;"
+              >
+                <div
+                  class="_card_d75732 undefined"
+                  data-testid="Card"
+                >
+                  <h1>
+                    Card 1
+                  </h1>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit, 
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li
+              aria-label="2 of 4"
+              aria-roledescription="slide"
+              class="splide__slide is-visible is-next"
+              id="splide02-slide02"
+              role="tabpanel"
+            >
+              <div
+                style="width: 640px; max-width: 100vw;"
+              >
+                <div
+                  class="_card_d75732 undefined"
+                  data-testid="Card"
+                >
+                  <h1>
+                    Card 2
+                  </h1>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit, 
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li
+              aria-label="3 of 4"
+              aria-roledescription="slide"
+              class="splide__slide is-visible"
+              id="splide02-slide03"
+              role="tabpanel"
+            >
+              <div
+                style="width: 640px; max-width: 100vw;"
+              >
+                <div
+                  class="_card_d75732 undefined"
+                  data-testid="Card"
+                >
+                  <h1>
+                    Card 3
+                  </h1>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit, 
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li
+              aria-label="4 of 4"
+              aria-roledescription="slide"
+              class="splide__slide is-visible"
+              id="splide02-slide04"
+              role="tabpanel"
+            >
+              <div
+                style="width: 640px; max-width: 100vw;"
+              >
+                <div
+                  class="_card_d75732 undefined"
+                  data-testid="Card"
+                >
+                  <h1>
+                    Card 4
+                  </h1>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit, 
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li
+              aria-label="1 of 4"
+              aria-roledescription="slide"
+              class="splide__slide splide__slide--clone is-active is-visible"
+              id="splide02-clone05"
+              role="tabpanel"
+            >
+              <div
+                style="width: 640px; max-width: 100vw;"
+              >
+                <div
+                  class="_card_d75732 undefined"
+                  data-testid="Card"
+                >
+                  <h1>
+                    Card 1
+                  </h1>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit, 
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li
+              aria-label="2 of 4"
+              aria-roledescription="slide"
+              class="splide__slide splide__slide--clone is-visible"
+              id="splide02-clone06"
+              role="tabpanel"
+            >
+              <div
+                style="width: 640px; max-width: 100vw;"
+              >
+                <div
+                  class="_card_d75732 undefined"
+                  data-testid="Card"
+                >
+                  <h1>
+                    Card 2
+                  </h1>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit, 
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li
+              aria-label="3 of 4"
+              aria-roledescription="slide"
+              class="splide__slide splide__slide--clone is-visible"
+              id="splide02-clone07"
+              role="tabpanel"
+            >
+              <div
+                style="width: 640px; max-width: 100vw;"
+              >
+                <div
+                  class="_card_d75732 undefined"
+                  data-testid="Card"
+                >
+                  <h1>
+                    Card 3
+                  </h1>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit, 
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li
+              aria-label="4 of 4"
+              aria-roledescription="slide"
+              class="splide__slide splide__slide--clone is-visible"
+              id="splide02-clone08"
+              role="tabpanel"
+            >
+              <div
+                style="width: 640px; max-width: 100vw;"
+              >
+                <div
+                  class="_card_d75732 undefined"
+                  data-testid="Card"
+                >
+                  <h1>
+                    Card 4
+                  </h1>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit, 
+                  </p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="_arrowContainer_e10190 splide__arrows splide__arrows--ltr"
+        >
+          <button
+            aria-controls="splide02-track"
+            aria-label="Go to last slide"
+            class="_arrowPrev_e10190 splide__arrow splide__arrow--prev"
+          >
+            <img
+              alt=""
+              aria-hidden="true"
+              height="24"
+              src="/src/images/icons/icon-chevron-right.svg"
+              width="24"
+            />
+          </button>
+          <button
+            aria-controls="splide02-track"
+            aria-label="Next slide"
+            class="_arrowNext_e10190 splide__arrow splide__arrow--next"
+          >
+            <img
+              alt=""
+              aria-hidden="true"
+              height="24"
+              src="/src/images/icons/icon-chevron-right.svg"
+              width="24"
+            />
+          </button>
+        </div>
+        <ul
+          aria-label="Select a slide to show"
+          class="splide__pagination splide__pagination--ltr"
+          role="tablist"
+        >
+          <li
+            role="presentation"
+          >
+            <button
+              aria-controls="splide02-slide01"
+              aria-label="Go to slide 1"
+              aria-selected="true"
+              class="splide__pagination__page is-active"
+              role="tab"
+              type="button"
+            />
+          </li>
+          <li
+            role="presentation"
+          >
+            <button
+              aria-controls="splide02-slide02"
+              aria-label="Go to slide 2"
+              class="splide__pagination__page"
+              role="tab"
+              tabindex="-1"
+              type="button"
+            />
+          </li>
+          <li
+            role="presentation"
+          >
+            <button
+              aria-controls="splide02-slide03"
+              aria-label="Go to slide 3"
+              class="splide__pagination__page"
+              role="tab"
+              tabindex="-1"
+              type="button"
+            />
+          </li>
+          <li
+            role="presentation"
+          >
+            <button
+              aria-controls="splide02-slide04"
+              aria-label="Go to slide 4"
+              class="splide__pagination__page"
+              role="tab"
+              tabindex="-1"
+              type="button"
+            />
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

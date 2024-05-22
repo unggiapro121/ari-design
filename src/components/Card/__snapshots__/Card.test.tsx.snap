@@ -1,0 +1,12 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Card component > does render correctly 1`] = `
+<div
+  className="_card_d75732 undefined"
+  data-testid="Card"
+>
+  <h1>
+     I'm a card! 
+  </h1>
+</div>
+`;

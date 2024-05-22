@@ -1,0 +1,54 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+$directions: row, column, row-reverse, column-reverse;
+
+.stack {
+  display: flex;
+}
+
+@mixin stackSpacing($direction) {
+  @each $spacing-size, $spacing in $spacings {
+    &.stack__#{$spacing-size} {
+      @if $direction == row {
+        & > * + * {
+          margin: 0;
+          margin-left: $spacing;
+        }
+      }
+
+      @if $direction == column {
+        & > * + * {
+          margin: 0;
+          margin-top: $spacing;
+        }
+      }
+
+      @if $direction == row-reverse {
+        & > * + * {
+          margin: 0;
+          margin-right: $spacing;
+        }
+      }
+
+      @if $direction == column-reverse {
+        & > * + * {
+          margin: 0;
+          margin-bottom: $spacing;
+        }
+      }
+    }
+  }
+}
+
+@each $breakpoint-size, $breakpoint in $breakpoints {
+  @each $direction in $directions {
+    .stack__#{$direction}__#{$breakpoint-size} {
+      @media (min-width: $breakpoint) {
+        flex-direction: $direction;
+
+        @include stackSpacing($direction);
+      }
+    }
+  }
+}

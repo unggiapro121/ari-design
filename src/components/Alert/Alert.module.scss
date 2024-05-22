@@ -1,0 +1,28 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.alert {
+  box-sizing: border-box;
+  padding: 12px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  min-height: 48px;
+
+  &__info {
+    background: $color-blue-10;
+  }
+
+  &__error {
+    background: $color-red-10;
+  }
+
+  &Dismiss {
+    @include icon-button;
+
+    width: 24px;
+    margin-left: 12px;
+    background-image: url('../../images/icons/icon-close.svg');
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,99 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.input {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  color: $color-black;
+  background-color: $color-white;
+  position: relative;
+
+  &:focus-within {
+    & > * {
+      border-color: $color-black;
+    }
+
+    .tooltip {
+      visibility: visible;
+    }
+  }
+
+  &Prefix {
+    @include base-input;
+
+    background-color: $color-white;
+    border-right: none;
+  }
+
+  &Suffix {
+    @include base-input;
+
+    background-color: $color-white;
+    border-left: none;
+  }
+
+  &Container {
+    @include base-input;
+
+    flex-grow: 1;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    input {
+      @include font-style(input);
+
+      width: 100%;
+      border: none;
+      background-color: transparent;
+      padding: 0;
+      margin: 0;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    // Override flag set when custom input is used,
+    // this fixes issues where clicking on the edges of a custom
+    // input wouldn't focus the input
+    &__customInput {
+      padding: 0 !important;
+    }
+  }
+
+  &__error {
+    border-color: $color-red;
+
+    * {
+      border-color: $color-red;
+    }
+  }
+}
+
+.tooltip {
+  position: absolute;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  visibility: hidden;
+  width: 100%;
+  height: fit-content;
+  box-sizing: border-box;
+  top: 100%;
+  z-index: 2;
+
+  &Triangle {
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid $color-blue-30;
+  }
+
+  &Box {
+    padding: 10px;
+    background-color: $color-blue-30;
+  }
+}

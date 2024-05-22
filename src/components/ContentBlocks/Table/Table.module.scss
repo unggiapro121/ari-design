@@ -1,0 +1,11 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.table {
+  @include content-block;
+  @include content-block-container;
+
+  &__inset {
+    @include content-block(inset);
+  }
+}

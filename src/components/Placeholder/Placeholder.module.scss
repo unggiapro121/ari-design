@@ -1,0 +1,28 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+$temp-color-orange: darkorange;
+$temp-color-yellow: yellow;
+
+.placeholder {
+  @include font-style(h4);
+
+  border: 1px solid $color-black-solid;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+
+  & p {
+    margin: 0;
+  }
+
+  &Status {
+    display: inline;
+    background-color: $temp-color-yellow;
+    padding: 5px;
+    margin-right: 5px;
+    border-radius: 5px;
+    color: $temp-color-orange;
+    border: 1px solid $temp-color-orange;
+  }
+}

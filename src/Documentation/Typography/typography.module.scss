@@ -1,0 +1,21 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.typography {
+  width: 50%;
+
+  &__info {
+    color: $color-inactive;
+  }
+
+  &__handle {
+    padding: 12px 0;
+  }
+
+  pre {
+    padding: 15px;
+    background: $color-light-grey;
+    border-radius: 5px;
+    font-size: 0.9em;
+  }
+}

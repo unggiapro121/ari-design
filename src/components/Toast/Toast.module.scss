@@ -1,0 +1,75 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+$horizontal-alignments: 'left', 'right';
+$vertical-alignments: 'top', 'bottom';
+
+:root {
+  --spacing: 20px;
+  --vertical: var(--spacing);
+}
+
+.toast {
+  --horizontal: 0;
+
+  z-index: $z-index-toast;
+  padding: 10px var(--spacing);
+  max-width: $screen-md;
+  width: calc(100% - (var(--spacing) * 2));
+
+  @include min-md {
+    width: 100%;
+
+    --horizontal: var(--spacing);
+  }
+
+  &Align {
+    @include createModifiers(
+      (
+        var(--vertical): (
+          'top',
+          'bottom',
+        ),
+      )
+    );
+    @include createModifiers(
+      (
+        var(--horizontal): (
+          'left',
+          'right',
+        ),
+      )
+    );
+
+    &__center {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &Position {
+    &__absolute {
+      position: absolute;
+    }
+
+    &__fixed {
+      position: fixed;
+
+      @include md {
+        --horizontal: var(--spacing);
+      }
+    }
+  }
+
+  &Variant {
+    @include createModifiers(
+      (
+        'background-color': (
+          'neutral': $color-black-10,
+          'success': $color-blue-10,
+          'error': $color-red-10,
+        ),
+      )
+    );
+  }
+}

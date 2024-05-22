@@ -1,0 +1,41 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+$spacer-sizes: (
+  xs: 21px,
+  sm: 45px,
+  md: 72px,
+  lg: 118px,
+  xl: 180px,
+);
+
+$breakpoint-ratio: (
+  sm: 0.5,
+  md: 0.75,
+  lg: 1,
+  xl: 1.2,
+);
+
+@function calc-margin($breakpoint, $size) {
+  @return map-get($spacer-sizes, $size) * map-get($breakpoint-ratio, $breakpoint);
+}
+
+.spacer {
+  @each $size, $value in $spacer-sizes {
+    &__#{$size} {
+      margin-top: calc-margin(sm, $size);
+
+      @include min-md {
+        margin-top: calc-margin(md, $size);
+      }
+
+      @include min-lg {
+        margin-top: calc-margin(lg, $size);
+      }
+
+      @include min-xxl {
+        margin-top: calc-margin(xl, $size);
+      }
+    }
+  }
+}

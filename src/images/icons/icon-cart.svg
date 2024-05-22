@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Cart</title>
+    <g id="Project-Connect-[WIP]" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="AmpolCard-Icons" transform="translate(-420.000000, -333.000000)">
+            <g id="Cart" transform="translate(420.000000, 333.000000)">
+                <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+                <g id="ic_cart" transform="translate(1.000000, 1.000000)" fill="#000000">
+                    <path d="M5.62613,8.05819 L10,1.06 L8.304,0 L3.304,8 L3.39711,8.05819 L2.0707,8.05819 L2,8.05819 L0,8.05819 L3.5,21.0582 L18.5,21.0582 L22,8.05819 L20.0207,8.05819 L20,8.13319 L20,8.05819 L18.8075,8.05819 L14,0.0585935 L12.2857,1.0888 L16.4741,8.05819 L5.62613,8.05819 Z M19.4686,10.0582 L2.60613,10.0582 L5,19.0001 L17,19.0001 L19.4686,10.0582 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

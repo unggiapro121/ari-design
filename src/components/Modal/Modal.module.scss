@@ -1,0 +1,281 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+// Forces full screen on mobile if present
+@mixin fullscreen {
+  height: 100%;
+  width: 100%;
+  max-width: unset;
+  max-height: unset;
+
+  .modalActions {
+    & > * {
+      max-width: unset;
+      width: 100%;
+    }
+  }
+}
+
+@mixin scrollable {
+  overflow-y: scroll;
+  background: $color-white;
+
+  &::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $color-black-20;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+}
+
+.container {
+  left: 0;
+  top: 0;
+  z-index: $z-index-modal;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: hidden;
+
+  @include md {
+    align-items: flex-end;
+    height: var(--vh, 1vh);
+  }
+}
+
+.modal {
+  width: 350px;
+  max-height: 350px;
+  background: $color-white;
+  position: relative;
+  padding: $spacing-m;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+
+  @include md {
+    width: 100%;
+  }
+
+  &__dynamic {
+    width: min-content;
+    max-height: fit-content;
+
+    @include min-md {
+      .modalActions {
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+
+    @include md {
+      @include fullscreen;
+    }
+  }
+
+  &__single {
+    .modalTopTitle {
+      max-width: 250px;
+    }
+  }
+
+  &__double {
+    width: 650px;
+    max-height: 500px;
+
+    @include min-md {
+      .modalActions {
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+
+    @include md {
+      @include fullscreen;
+    }
+  }
+
+  &__triple {
+    width: 1200px;
+    max-height: 800px;
+
+    .modalTopTitle {
+      @include font-style(h2);
+    }
+
+    @include min-md {
+      .modalActions {
+        flex-direction: row;
+        justify-content: flex-end;
+      }
+    }
+
+    @include md {
+      @include fullscreen;
+    }
+  }
+
+  // Full Screen desktop variant should have standard action buttons on right side
+  &__fullscreen {
+    height: 100%;
+    width: 100%;
+    max-height: unset;
+
+    @include min-md {
+      .modalActions {
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+      }
+    }
+
+    @include md {
+      @include fullscreen;
+    }
+  }
+
+  &__forceFullScreen {
+    @include md {
+      @include fullscreen;
+    }
+  }
+
+  &Content {
+    overflow: auto;
+    overflow-x: hidden;
+
+    @include scrollable;
+  }
+
+  &Actions {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    padding-top: $spacing-m;
+    gap: $spacing-xs;
+
+    &Mobile {
+      display: none;
+      box-sizing: border-box;
+      flex-direction: column;
+      margin-top: auto;
+      padding-top: $spacing-m;
+      gap: $spacing-xs;
+
+      & > * {
+        width: auto;
+      }
+
+      @include md {
+        display: flex;
+      }
+    }
+
+    @include md {
+      display: none;
+    }
+  }
+
+  &Backdrop {
+    background: rgb(0 0 0 / 60%);
+    width: 100%;
+    height: 100%;
+    position: inherit;
+    z-index: -2;
+  }
+
+  &Top {
+    padding-bottom: $spacing-m;
+
+    &Subtitle {
+      margin: 0;
+    }
+
+    &Section {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    &Container {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-start;
+      align-items: center;
+      gap: $spacing-m;
+
+      @include md {
+        width: 100%;
+      }
+    }
+
+    &Actions {
+      @include md {
+        width: 100%;
+
+        & > * {
+          width: 100%;
+        }
+      }
+    }
+
+    &Title {
+      margin: 0;
+
+      @include md {
+        @include font-style(h2);
+      }
+    }
+  }
+
+  &Close {
+    border: none;
+    padding: 0;
+    appearance: none;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: $spacing-m;
+    background: url('../../images/icons/icon-close.svg') no-repeat;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+  }
+
+  &Alert {
+    position: absolute;
+    height: 48px;
+    width: 100%;
+    top: -48px;
+    left: 0;
+    z-index: -1;
+  }
+
+  &AlertContent {
+    transition: all ease-in-out 0.6s;
+    visibility: hidden;
+    top: 48px;
+    height: 48px;
+    width: 100%;
+    position: absolute;
+
+    &__active {
+      visibility: visible;
+      top: 0;
+    }
+  }
+
+  &IconBlock {
+    top: 0;
+    margin-right: 48px;
+  }
+}

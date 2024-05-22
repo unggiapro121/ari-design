@@ -1,0 +1,29 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`CardIcon component > does render correctly 1`] = `
+<div
+  className="_cardIconBlock_1365fc"
+  data-testid="card-Icon"
+  onClick={[Function]}
+>
+  <img
+    alt="modal icon"
+    className="_cardIcon_1365fc"
+    height="100"
+    loading="lazy"
+    src="./../../../assets/placeholder/hero-birdseye.webp"
+    width="100"
+  />
+  <div
+    className="_cardIconOverlay_1365fc"
+  >
+    <img
+      alt="hover icon"
+      height="24"
+      loading="lazy"
+      src="/assets/icons/icons-eye-visible.png"
+      width="24"
+    />
+  </div>
+</div>
+`;

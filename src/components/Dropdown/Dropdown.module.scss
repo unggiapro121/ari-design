@@ -1,0 +1,109 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.dropdown {
+  position: relative;
+  width: 100%;
+  height: 48px;
+
+  &Native,
+  &Custom {
+    @include font-style(input);
+
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    height: 48px;
+    border: 2px solid $color-black-20;
+    cursor: pointer;
+  }
+
+  &Native {
+    @include toggleBackground;
+  }
+
+  &Custom {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    &__active {
+      .dropdownOptions {
+        display: block;
+      }
+    }
+  }
+
+  &Option {
+    box-sizing: border-box;
+    padding: 7px 20px 7px 10px;
+    height: 38px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    user-select: none;
+
+    &:hover,
+    &__active {
+      background-color: $color-background-light;
+    }
+
+    &__overflowNormal {
+      overflow: auto;
+      white-space: normal;
+      height: auto;
+    }
+  }
+
+  &Options {
+    box-sizing: border-box;
+    position: absolute;
+    top: 46px;
+    left: -2px;
+    width: calc(100% + 4px);
+    border: 1px solid $color-black-10;
+    border-top: none;
+    background-color: $color-white;
+    padding: 4px 0 6px;
+    z-index: $z-index-dropdown;
+    display: none;
+
+    &:hover {
+      .dropdownOption__active {
+        background: $color-white;
+
+        &:hover {
+          background: $color-background-light;
+        }
+      }
+    }
+  }
+
+  &Trigger {
+    @include toggleBackground;
+  }
+
+  &Value {
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  @media (hover: hover) {
+    .dropdownCustom {
+      display: block;
+    }
+
+    .dropdownNative:focus + .dropdownCustom {
+      display: none;
+    }
+  }
+
+  &__error {
+    * {
+      border-color: $color-red;
+    }
+  }
+}

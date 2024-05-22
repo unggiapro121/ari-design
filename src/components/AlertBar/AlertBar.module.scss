@@ -1,0 +1,52 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.alertbar {
+  &__hidden {
+    display: none;
+  }
+
+  &__red {
+    background-color: $color-red;
+  }
+
+  &__blue {
+    background-color: $color-blue;
+  }
+
+  &Inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 $spacing-xs;
+    color: $color-white;
+  }
+
+  &Icon {
+    margin: $spacing-xs;
+  }
+
+  &Message > * {
+    color: $color-white;
+  }
+
+  &Message a {
+    color: inherit;
+    font-size: inherit;
+  }
+
+  &BtnClose {
+    background-color: transparent;
+    border: 0 none;
+    cursor: pointer;
+    line-height: 1;
+    margin-left: $spacing-m;
+    padding: 6px;
+  }
+
+  @include sm {
+    &Message > * {
+      font-size: map-get(map-get($font-styles, small), font-size);
+    }
+  }
+}

@@ -1,0 +1,34 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.breadcrumbs {
+  margin-block-end: 1em;
+  margin-block-start: 1em;
+
+  &List {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+  }
+
+  &Item {
+    display: inline-block;
+
+    a {
+      color: $color-black-60;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    &__current {
+      color: $color-blue;
+    }
+  }
+
+  &Separator {
+    margin: 0 0.5em;
+  }
+}

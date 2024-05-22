@@ -1,0 +1,57 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.readonlyField {
+  @include base-input;
+
+  width: 100%;
+  overflow-x: hidden;
+  white-space: nowrap;
+  background-color: $color-black-10;
+  color: $color-black-60;
+
+  &Dropdown {
+    @include toggleBackground;
+
+    background-color: $color-black-10;
+  }
+
+  &Checkbox {
+    @include base-checkbox;
+
+    min-height: 20px;
+    padding: 0;
+    background-color: $color-black-10;
+
+    &__checked {
+      @include base-checkbox-checked;
+
+      &::after {
+        mask-image: url('../../images/checkbox-selected.svg');
+        mask-position: center;
+        mask-size: cover;
+        background: $color-black-30;
+      }
+    }
+  }
+
+  &Radiobutton {
+    @include base-radio-button;
+
+    min-height: 16px;
+
+    &__checked {
+      &::after {
+        display: flex;
+        background-color: $color-black-30;
+      }
+    }
+  }
+
+  &Value {
+    width: 100%;
+    display: block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}

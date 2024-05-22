@@ -1,0 +1,19 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.toggleicon {
+  appearance: none;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  padding: 5px;
+
+  & > img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+}

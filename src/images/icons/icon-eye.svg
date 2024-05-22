@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icons/See/Action Copy</title>
+    <g id="Project-Connect-[WIP]" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="AmpolCard-Icons" transform="translate(-204.000000, -333.000000)">
+            <g id="Icons/See/Action-Copy" transform="translate(204.000000, 333.000000)">
+                <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+                <path d="M12,4.85254706 C13.695974,4.85254706 15.391948,5.46585407 16.7300724,6.69246808 L16.7300724,6.69246808 L22.5201072,12 L16.7300724,17.3075319 C15.391948,18.5341459 13.695974,19.1474529 12,19.1474529 C10.304026,19.1474529 8.60805198,18.5341459 7.2699276,17.3075319 L7.2699276,17.3075319 L1.47989278,12 L7.2699276,6.69246808 C8.60805198,5.46585407 10.304026,4.85254706 12,4.85254706 Z" id="Oval" stroke="#000000" stroke-width="2"></path>
+                <circle id="Oval" stroke="#000000" stroke-width="2" fill="#000000" cx="12" cy="12" r="2"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

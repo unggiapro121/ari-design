@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ic_edit</title>
+    <g id="Project-Connect-[WIP]" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="AmpolCard-Icons" transform="translate(-708.000000, -333.000000)">
+            <g id="ic_edit" transform="translate(708.000000, 333.000000)">
+                <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+                <path d="M11.83035,8.44451 L15.55548,12.16965 L7.84648,19.87865 L4.587,19.413 L4.12133,16.15351 L11.83033,8.44451 M11.83033,5.61608 L2,15.44644 L2.69632,20.32065 C2.76914845,20.8303469 3.16962311,21.2308215 3.67932,21.30365 L8.55359,22 L18.38391,12.16965 L11.83035,5.61608 L11.83033,5.61608 Z" id="Shape" fill="#000000" fill-rule="nonzero"></path>
+                <path d="M19.20311,11.35047 L12.64955,4.79691 L15.10713,2.33932 C15.3243932,2.12205434 15.6190667,1.99999555 15.926325,1.99999555 C16.2335833,1.99999555 16.5282568,2.12205434 16.74552,2.33932 L21.66069,7.25449 C21.8779557,7.47175315 22.0000144,7.76642673 22.0000144,8.073685 C22.0000144,8.38094327 21.8779557,8.67561685 21.66069,8.89288 L19.20311,11.35047 Z" id="Path" fill="#000000" fill-rule="nonzero"></path>
+            </g>
+        </g>
+    </g>
+</svg>

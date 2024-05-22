@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icons/Chat/Action Copy@1x</title>
+    <g id="Project-Connect-[WIP]" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="AmpolCard-Icons" transform="translate(-492.000000, -430.000000)">
+            <g id="Icons/Chat/Action-Copy" transform="translate(492.000000, 430.000000)">
+                <g id="Icon" stroke="#000000" stroke-width="2">
+                    <path d="M19,10 C19,8.18492922 19,6.18492922 19,4 C15.289751,1.52650069 10.5385916,1.2307042 6.5501938,3.2249031 L5,4 L5,4 C5,4.6862915 5,6.6862915 5,10" id="Path"></path>
+                    <path d="M13,14 L12,14 C7,14 5,16 5,23" id="Path" stroke-linecap="round" transform="translate(9.000000, 18.500000) scale(1, -1) translate(-9.000000, -18.500000) "></path>
+                    <path d="M5,7 L5,17 L3,17 C2.44771525,17 1.94771525,16.7761424 1.58578644,16.4142136 C1.22385763,16.0522847 1,15.5522847 1,15 L1,15 L1,9 C1,8.44771525 1.22385763,7.94771525 1.58578644,7.58578644 C1.94771525,7.22385763 2.44771525,7 3,7 L3,7 L5,7 Z" id="Rectangle"></path>
+                    <path d="M23,7 L23,17 L21,17 C20.4477153,17 19.9477153,16.7761424 19.5857864,16.4142136 C19.2238576,16.0522847 19,15.5522847 19,15 L19,15 L19,9 C19,8.44771525 19.2238576,7.94771525 19.5857864,7.58578644 C19.9477153,7.22385763 20.4477153,7 21,7 L21,7 L23,7 Z" id="Rectangle-Copy" transform="translate(21.000000, 12.000000) scale(-1, 1) translate(-21.000000, -12.000000) "></path>
+                </g>
+                <rect id="Rectangle" fill="#000000" x="10" y="20" width="4" height="3"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

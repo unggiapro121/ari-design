@@ -1,0 +1,81 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.loading {
+  height: 2px;
+  background-color: $color-black-10;
+  position: relative;
+
+  &Bar {
+    background-color: $color-blue;
+    animation: rotating 2s cubic-bezier(1, 0, 1, 0.99);
+    height: 100%;
+    width: 100%;
+
+    @keyframes primary {
+      from {
+        width: 0%;
+      }
+
+      to {
+        width: 100%;
+      }
+    }
+
+    @keyframes indeterminate {
+      0% {
+        left: 0%;
+        width: 0%;
+      }
+
+      50% {
+        left: 50%;
+        width: 50%;
+      }
+
+      100% {
+        left: 100%;
+        width: 0;
+      }
+    }
+
+    @keyframes intermittent {
+      0% {
+        width: 0%;
+        animation-timing-function: cubic-bezier(0.42, 0, 1, 1);
+      }
+
+      25% {
+        width: 20%;
+        animation-timing-function: cubic-bezier(0, 0, 0.58, 1);
+      }
+
+      50% {
+        width: 50%;
+        animation-timing-function: cubic-bezier(0.42, 0, 1, 1);
+      }
+
+      75% {
+        width: 80%;
+        animation-timing-function: cubic-bezier(0, 0, 0.58, 1);
+      }
+
+      100% {
+        width: 100%;
+      }
+    }
+
+    &__primary {
+      animation: primary 2s linear;
+    }
+
+    &__intermittent {
+      animation: intermittent 5s linear;
+    }
+
+    &__indeterminate {
+      position: absolute;
+      animation: indeterminate 2s linear infinite;
+    }
+  }
+}

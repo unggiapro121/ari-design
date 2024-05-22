@@ -1,0 +1,51 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.typeahead {
+  position: relative;
+  width: 100%;
+
+  &Results {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    width: calc(100% - 4px);
+    border: 2px solid $color-black-20;
+    background-color: $color-white;
+    border-top: none;
+    z-index: $z-index-dropdown;
+
+    @include scrollable;
+
+    &__active {
+      display: flex;
+    }
+  }
+
+  &Loading {
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+  }
+
+  &Item {
+    padding: 20px;
+    border-bottom: 2px solid $color-black-20;
+    text-align: left;
+
+    &:hover {
+      background-color: $color-background-light;
+      cursor: pointer;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &__selected {
+      background-color: $color-background-light;
+      font-weight: bolder;
+    }
+  }
+}

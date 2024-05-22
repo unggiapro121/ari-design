@@ -1,0 +1,28 @@
+@font-face {
+  font-family: 'MarkOT-Book';
+  font-stretch: normal;
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  src: url('./font/MarkOT-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'MarkOT-Book';
+  font-stretch: normal;
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+  src: url('./font/MarkOT-Bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'MarkOT-Book Fallback';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Arial');
+  ascent-override: 92.21%;
+  descent-override: 23.05%;
+  line-gap-override: 0%;
+  size-adjust: 109.97%;
+}

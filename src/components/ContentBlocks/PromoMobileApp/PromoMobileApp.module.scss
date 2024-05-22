@@ -1,0 +1,134 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+$img-max-size-sm: 390px;
+$badge-height-sm: 40px;
+$badge-height-md: 50px;
+$badge-height-xl: 67px;
+
+.block {
+  @include content-block;
+
+  &__white * {
+    color: $color-white;
+  }
+
+  &__bgBlue {
+    background-color: $color-blue;
+  }
+
+  &__bgCobalt {
+    background-color: $color-cobalt;
+  }
+
+  @include min-md {
+    display: flex;
+    justify-content: flex-end;
+
+    &__bgImage {
+      background-image: var(--bg-img-url);
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.app {
+  @include content-block-inner;
+
+  box-sizing: border-box;
+
+  @include min-md {
+    max-width: 50%;
+  }
+
+  @include min-xl {
+    padding-right: var(--content-gutter-xl);
+  }
+
+  &Icon {
+    height: auto;
+    width: 50px;
+    margin-bottom: $spacing-s;
+
+    @include min-xl {
+      width: 100px;
+    }
+  }
+
+  &ImageWrapper {
+    padding-bottom: var(--content-block-padding);
+  }
+
+  &Image {
+    height: auto;
+    max-height: $img-max-size-sm;
+    object-fit: contain;
+    width: 100%;
+
+    @include min-md {
+      display: none;
+    }
+  }
+
+  &Heading {
+    @include font-style(h1);
+
+    margin: 0;
+  }
+
+  &Description {
+    > * {
+      @include font-style(h3);
+    }
+
+    a {
+      font-size: inherit;
+    }
+
+    a:hover,
+    a:visited {
+      color: inherit;
+    }
+  }
+}
+
+.downloads {
+  display: flex;
+  justify-content: center;
+  margin-top: 44px;
+
+  &Link {
+    line-height: 0;
+    margin: 0;
+  }
+
+  &Link + &Link {
+    margin-left: $spacing-xs;
+  }
+
+  &Badge {
+    height: $badge-height-md;
+  }
+
+  @include sm {
+    &Badge {
+      height: $badge-height-sm;
+    }
+  }
+
+  @include min-md {
+    justify-content: flex-start;
+  }
+
+  @include min-xl {
+    &Badge {
+      height: 67px;
+    }
+
+    &Link + &Link {
+      margin-left: $spacing-s;
+    }
+  }
+}

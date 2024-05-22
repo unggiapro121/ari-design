@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ic_ExternalLink</title>
+    <g id="Project-Connect-[WIP]" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="AmpolCard-Icons" transform="translate(-132.000000, -333.000000)">
+            <g id="ic_ExternalLink" transform="translate(132.000000, 333.000000)">
+                <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+                <line x1="5.75757895" y1="19.6832777" x2="18.2348887" y2="4.31068062" id="Line-24" stroke="#000000" stroke-width="2" stroke-linecap="square" transform="translate(11.968981, 12.034814) rotate(5.935171) translate(-11.968981, -12.034814) "></line>
+                <line x1="10" y1="4" x2="20" y2="4" id="Line-25" stroke="#000000" stroke-width="2" stroke-linecap="square"></line>
+                <line x1="20" y1="14" x2="20" y2="4" id="Line-25" stroke="#000000" stroke-width="2" stroke-linecap="square"></line>
+            </g>
+        </g>
+    </g>
+</svg>

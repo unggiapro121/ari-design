@@ -1,0 +1,7 @@
+@function is-type($var, $type) {
+  @return type-of($var) == $type;
+}
+
+@function is-list($var) {
+  @return is-type($var, 'list');
+}

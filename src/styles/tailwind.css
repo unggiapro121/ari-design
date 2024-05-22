@@ -1,0 +1,3 @@
+/* We've omitted '@tailwind base' here in order to manually scope it to components that need it using the `.preflight` class */
+@tailwind components;
+@tailwind utilities;

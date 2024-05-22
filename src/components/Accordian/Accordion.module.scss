@@ -1,0 +1,179 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+$icon-size: 24px;
+$richtext-spacing-margin: 1.4em;
+
+.accordion {
+  margin: $spacing-m 0;
+  background-color: transparent;
+  transition: background-color 0.3s ease-in-out;
+
+  &Faq {
+    margin: 0;
+    border: 1px solid $color-white;
+    padding: $spacing-xs $spacing-s;
+  }
+
+  &Header {
+    margin: 0;
+
+    button {
+      display: flex;
+      align-items: flex-start;
+      cursor: pointer;
+      user-select: none;
+      justify-content: center;
+      vertical-align: middle;
+      width: 100%;
+
+      // Remove button styles
+      background: none;
+      color: inherit;
+      border: none;
+      padding: 0;
+      font: inherit;
+      text-align: inherit;
+    }
+
+    &FaqButton {
+      flex-direction: row-reverse;
+      justify-content: flex-end !important;
+      width: 100%;
+    }
+
+    &Title {
+      margin: 0;
+      text-align: left;
+    }
+
+    &Container {
+      width: 100%;
+    }
+
+    &Icon {
+      width: $icon-size;
+      height: $icon-size;
+      margin-right: $spacing-xs;
+    }
+
+    &Arrow {
+      width: $icon-size;
+      height: $icon-size;
+      margin-left: auto;
+      transform: rotate(180deg);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    &Symbol {
+      width: $icon-size;
+      height: $icon-size;
+      margin-left: 0;
+      transition: transform 0.3s ease-in-out;
+      margin-right: $spacing-m;
+    }
+  }
+
+  &Panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);
+    user-select: all;
+    padding-right: $icon-size;
+
+    &::before {
+      content: '';
+      display: block;
+      margin-top: $spacing-xs;
+    }
+  }
+
+  &PanelFaq {
+    padding-left: calc($icon-size + $spacing-m);
+    padding-right: $spacing-m;
+
+    &::before {
+      content: '';
+      display: block;
+      margin-top: $spacing-xs;
+    }
+
+    & > * {
+      color: $color-black;
+    }
+
+    & a {
+      color: inherit;
+      font-size: inherit;
+    }
+
+    & a:hover {
+      color: inherit;
+      font-size: inherit;
+    }
+
+    ol {
+      padding-left: 1.25em;
+
+      ul {
+        list-style-type: disc;
+      }
+    }
+
+    ul {
+      padding-left: 1.75em;
+    }
+
+    li {
+      margin: 0.5em 0;
+      padding-left: 0.5em;
+
+      & li {
+        margin: $spacing-xs 0;
+      }
+    }
+
+    p,
+    ol,
+    ul,
+    table,
+    blockquote {
+      & + h2,
+      & + h3 {
+        margin-top: $richtext-spacing-margin;
+      }
+    }
+
+    p:empty {
+      height: 1em;
+    }
+
+    :first-child {
+      margin-top: 0;
+    }
+
+    :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__open &Panel {
+    max-height: 9999px;
+    transition: max-height 0.3s cubic-bezier(1, 0, 1, 0);
+  }
+
+  &__open &Header {
+    &Arrow {
+      transform: rotate(0deg);
+    }
+  }
+
+  &__openFaq {
+    background-color: $color-blue-10;
+    transition: transform 0.3s;
+  }
+
+  &__withIcon &Panel {
+    padding-left: calc($icon-size + $spacing-xs);
+  }
+}

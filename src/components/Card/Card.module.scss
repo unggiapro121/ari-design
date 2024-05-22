@@ -1,0 +1,9 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.card {
+  margin: 10px;
+  background-color: $color-white;
+  padding: $spacing-l;
+  border: 1px solid $color-light-grey;
+}

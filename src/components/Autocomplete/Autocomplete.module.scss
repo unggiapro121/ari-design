@@ -1,0 +1,103 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.autocomplete {
+  position: relative;
+  width: 100%;
+}
+
+.loading {
+  position: absolute;
+  width: 100%;
+}
+
+.clearButton {
+  border: none;
+  background-color: $color-white;
+  width: fit-content;
+  right: 0;
+
+  // extend click region
+  padding: 20px;
+  margin-right: 2px;
+  z-index: 1;
+  cursor: pointer;
+  position: absolute;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('../../images/icons/icon-close.svg');
+}
+
+.dropdownContainer {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  z-index: $z-index-dropdown;
+}
+
+.dropdownItem {
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-black-10;
+  }
+}
+
+.defaultDropdownItem {
+  margin: 0;
+  padding: 10px;
+
+  &__selected {
+    background-color: $color-background-light;
+    font-weight: bolder;
+  }
+}
+
+.dropdownFooter {
+  border: 2px solid $color-black-20;
+  border-top: none;
+}
+
+.dropdown {
+  @include scrollable;
+
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 4px);
+  border: 2px solid $color-black-20;
+  background-color: $color-white;
+  border-top: none;
+}
+
+////////////////////////
+// STORYBOOK STYLING
+////////////////////////
+
+.postcodeItem {
+  padding: 20px;
+  border-bottom: 3px solid $color-background-light;
+  display: flex;
+  gap: $spacing-xxs;
+
+  &Suburb {
+    font-style: bold;
+  }
+
+  &Postcode {
+    color: $color-black-20;
+  }
+
+  &State {
+    color: $color-black-20;
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+}

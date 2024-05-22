@@ -1,0 +1,53 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.datepicker {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+}
+
+.antDatePicker {
+  outline: none;
+  border: none;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+
+  &Dropdown {
+    z-index: $z-index-dropdown;
+  }
+
+  // Override Ant Design styles
+  input {
+    @include font-style(input);
+
+    padding: 10px !important;
+    $font-style: map-get($font-styles, input);
+
+    font-size: map-get($font-style, font-size) !important;
+    line-height: map-get($font-style, line-height) !important;
+    font-weight: map-get($font-style, font-weight) !important;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  &Clear {
+    border: none;
+    background-color: transparent;
+    width: 30px;
+    height: 100%;
+    right: 0;
+    margin-right: $spacing-xxs;
+    cursor: pointer;
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../../images/icons/icon-close.svg');
+  }
+}

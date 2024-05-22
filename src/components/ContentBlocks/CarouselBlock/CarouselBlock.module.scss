@@ -1,0 +1,49 @@
+@use 'sass:math';
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+$aspect-ratio-small: 1.3;
+$width-small: 650px;
+$aspect-ratio-large: 1.1;
+$width-large: 788px;
+$overlay-bg-color: rgb(246 246 246 / 85%);
+
+.carouselItem {
+  align-items: flex-end;
+  background-image: var(--bg-image-sm);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+
+  .carousel__small & {
+    height: math.div($width-small, $aspect-ratio-small);
+    margin: 0 12px;
+    max-width: $width-small;
+    width: 100vw;
+  }
+
+  .carousel__large & {
+    height: math.div($width-large, $aspect-ratio-large);
+    margin: 0 12px;
+    max-width: $width-large;
+    width: 100vw;
+  }
+
+  &Overlay {
+    background-color: $overlay-bg-color;
+    bottom: 0;
+    margin: 0 $spacing-m;
+    padding: $spacing-m;
+    width: 100%;
+  }
+
+  &Title {
+    @include font-style(h3);
+
+    margin-top: 0;
+  }
+
+  &Link {
+    margin-top: $spacing-l;
+  }
+}

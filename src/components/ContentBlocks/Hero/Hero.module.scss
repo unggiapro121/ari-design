@@ -1,0 +1,288 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+$hero-height-half: 360px;
+$hero-height-full: 720px;
+$hero-overlay-min-height-sm: 216px;
+$hero-overlay-min-height-lg: 220px;
+$hero-half-overlay-voffset-sm: -107px;
+$hero-full-overlay-voffset-lg: var(--spacing-m);
+$hero-overlay-bg-color: rgb(246 246 246 / 95%);
+$hero-overlay-secondary-bg-color: rgb(24 36 156 / 95%);
+$hero-overlay-secondary-flex-basis: 30%;
+$hero-overlay-breadcrumbs-pad-double: calc(2 * $spacing-m);
+$hero-overlay-breadcrumbs-pad-triple: calc(3 * $spacing-m);
+
+$var-bg-img-default: var(--bg-img-url-default);
+$var-bg-img-square: var(--bg-img-url-square, #{$var-bg-img-default});
+$var-bg-img-wide: var(--bg-img-url-wide, #{$var-bg-img-default});
+
+%bgImages {
+  background-image: $var-bg-img-square;
+  background-position: 50%;
+  background-size: cover;
+
+  @include min-sm {
+    background-image: $var-bg-img-default;
+  }
+
+  @include min-xxl {
+    background-image: $var-bg-img-wide;
+  }
+}
+
+%heroImage {
+  @extend %bgImages;
+
+  height: $hero-height-half;
+  width: 100%;
+}
+
+.hero {
+  @include content-block;
+
+  position: relative;
+
+  &Background {
+    @extend %heroImage;
+  }
+
+  &__inset {
+    @include content-block(inset);
+  }
+
+  @include min-md {
+    &__full {
+      align-items: flex-end;
+    }
+
+    &__full .overlayContainer {
+      bottom: $hero-full-overlay-voffset-lg;
+      margin-top: initial;
+      position: absolute;
+      width: 100%;
+    }
+
+    &__full &Background {
+      height: $hero-height-full;
+    }
+  }
+}
+
+.overlay,
+.panel {
+  box-sizing: border-box;
+}
+
+.overlay {
+  @include content-block-inner;
+
+  background-color: $hero-overlay-bg-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @include min-md {
+    flex-grow: 1;
+
+    &Container__withPanel & {
+      flex-basis: ($hero-overlay-secondary-flex-basis * -1) + 100;
+    }
+
+    &Container__withBreadcrumbs &,
+    &Container__insetWithBreadcrumbs & {
+      padding-bottom: $hero-overlay-breadcrumbs-pad-triple;
+    }
+  }
+
+  @include min-lg {
+    @include py($spacing-m);
+
+    &Container__insetWithBreadcrumbs & {
+      padding-top: var(--content-block-padding);
+    }
+  }
+
+  @include min-xl {
+    &Container__withBreadcrumbs:not(.overlayContainer__withPanel) & {
+      padding-bottom: $hero-overlay-breadcrumbs-pad-double;
+    }
+  }
+
+  &Container {
+    @include content-block-container;
+
+    margin-top: $hero-half-overlay-voffset-sm;
+    min-height: $hero-overlay-min-height-sm;
+
+    @include min-md {
+      display: flex;
+    }
+
+    @include min-lg {
+      min-height: $hero-overlay-min-height-lg;
+    }
+  }
+}
+
+.heading {
+  @include font-style(h1);
+
+  margin: 0;
+}
+
+.description {
+  @include font-style(base);
+
+  margin-bottom: 0;
+}
+
+.buttonContainer {
+  margin-top: $spacing-m;
+  width: 100%;
+
+  button {
+    display: inline-block;
+  }
+}
+
+.panel {
+  margin-top: $spacing-m;
+
+  @include min-md {
+    display: flex;
+    flex-basis: $hero-overlay-secondary-flex-basis;
+    flex-direction: column;
+    margin-top: initial;
+  }
+
+  &__promo {
+    background-color: $hero-overlay-secondary-bg-color;
+    color: $color-white;
+    padding: var(--content-block-padding);
+
+    @include min-md {
+      justify-content: space-between;
+    }
+
+    @include min-lg {
+      padding: $spacing-m;
+    }
+
+    &Heading {
+      @include font-style(h3);
+    }
+  }
+
+  &__quicklinks {
+    background-color: var(--background-light);
+    color: $color-black;
+
+    &__full {
+      padding: $spacing-m;
+    }
+
+    &__half {
+      @include md {
+        padding: $spacing-xs;
+      }
+    }
+
+    &Heading {
+      @include font-style(h2);
+
+      margin: $spacing-m;
+    }
+
+    &List {
+      margin-top: 0;
+      overflow-y: auto;
+      padding-left: $spacing-m;
+      display: inline;
+
+      &Item {
+        list-style-type: none;
+        margin-bottom: $spacing-xs;
+        position: relative;
+        padding: 0.5em 0.5em 0.5em 1.5em;
+
+        ::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 12px;
+          height: 14px;
+          width: 20px;
+          background-image: url('../../../images/icons/icon-chevron-right.svg');
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
+      }
+    }
+
+    &__link {
+      color: $color-black;
+      text-decoration: none;
+    }
+  }
+}
+
+.breadcrumbs {
+  bottom: -1em;
+  position: relative;
+
+  @include min-md {
+    bottom: 0;
+    position: absolute;
+  }
+}
+
+.landingHero {
+  @include content-block;
+  @extend %bgImages;
+
+  &Overlay {
+    @include content-block-inner;
+
+    background-color: $color-background-light;
+    box-sizing: border-box;
+    padding-bottom: $spacing-m;
+    padding-top: 36px;
+  }
+
+  &InlineImage {
+    @extend %heroImage;
+  }
+
+  @include sm {
+    background-image: none;
+  }
+
+  @include min-md {
+    height: $hero-height-full;
+    position: relative;
+
+    &Overlay {
+      background-color: transparent;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      justify-content: center;
+      padding-top: $spacing-m;
+      position: absolute;
+      width: 45%;
+
+      &__white {
+        color: $color-white;
+      }
+
+      &__black {
+        color: $color-black;
+      }
+    }
+
+    &InlineImage {
+      display: none;
+    }
+  }
+}

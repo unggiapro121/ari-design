@@ -1,0 +1,12 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.textarea {
+  width: 100%;
+
+  textarea {
+    @include base-input;
+
+    width: 100%;
+  }
+}

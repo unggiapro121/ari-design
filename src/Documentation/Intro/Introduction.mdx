@@ -1,0 +1,36 @@
+import { Meta } from '@storybook/blocks';
+import * as packageJson from '/package.json'
+
+<Meta
+  title="Documentation/Introduction"
+  parameters={{
+    fullPage: true,
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }}
+/>
+
+Version {packageJson.version}
+
+# Welcome to the Ampol Design System (ADS)
+
+## Installing this library in your project
+
+Follow this tutorial if you're setting up a project that requires Ampol's Design System.
+
+1. Navigate to your root project directory
+2. Create a `.npmrc` file and paste the following:
+
+```
+@ampol:registry=https://caltexau.pkgs.visualstudio.com/_packaging/ADS/npm/registry/
+registry=https://registry.npmjs.org/
+
+always-auth=false
+```
+
+3. Run `npm i -g better-vsts-npm-auth`
+4. Run `better-vsts-npm-auth` and follow the prompts
+5. Run `npm i @ampol/design-system`
+
+* Update the library to the latest using `npm update @ampol/design-system`

@@ -1,0 +1,37 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.accordion {
+  @include content-block;
+  @include content-block-container;
+
+  background-color: $color-background-light;
+
+  &__inset {
+    @include content-block(inset);
+  }
+
+  &__faq {
+    background-color: $color-white;
+
+    h4 {
+      font-weight: normal !important;
+    }
+  }
+
+  h4 {
+    font-weight: bold;
+  }
+}
+
+.content {
+  @include content-block-inner;
+
+  a {
+    padding: 0;
+  }
+}
+
+.list {
+  margin-bottom: $content-gutter-lg;
+}

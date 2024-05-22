@@ -1,0 +1,103 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+$proofpoint-gap-sm: 8px;
+$proofpoint-gap-xl: 12px;
+$proofpoint-size-xs: 44%;
+$proofpoint-size-sm: 200px;
+$proofpoint-size-md: 260px;
+$image-desktop-size: 96px;
+$image-mobile-size: 48px;
+
+.block {
+  @include content-block;
+
+  padding: $proofpoint-gap-sm;
+
+  @include min-xl {
+    padding: $proofpoint-gap-xl;
+  }
+}
+
+.proofpoint {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  &Item {
+    display: contents;
+
+    &:nth-child(2)::after {
+      content: '';
+      width: 100%;
+    }
+  }
+
+  &Container {
+    align-items: center;
+    background-color: var(--background-light);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: $proofpoint-gap-sm;
+    padding: $spacing-xs;
+    text-align: center;
+    width: $proofpoint-size-xs;
+  }
+
+  &Heading {
+    @include font-style(h3);
+  }
+
+  &HeadingLink {
+    @include font-style(h3);
+
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &Description {
+    @include font-style(h4);
+
+    margin: 0;
+  }
+
+  &Image {
+    height: $image-mobile-size;
+    width: $image-mobile-size;
+  }
+
+  @include min-sm {
+    &Container {
+      height: $proofpoint-size-sm;
+      width: $proofpoint-size-sm;
+    }
+  }
+
+  @include min-md {
+    &Container {
+      height: $proofpoint-size-md;
+      margin: $proofpoint-gap-xl;
+      padding: $spacing-s;
+      width: $proofpoint-size-md;
+    }
+
+    &Image {
+      height: $image-desktop-size;
+      width: $image-desktop-size;
+    }
+  }
+
+  @include min-xl {
+    &Item {
+      display: initial;
+    }
+  }
+}

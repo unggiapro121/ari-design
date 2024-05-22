@@ -1,0 +1,15 @@
+node_modules
+.DS_Store
+dist
+dist-ssr
+*.local
+storybook-static
+public
+.vercel
+.env
+.idea
+lib
+src/index.ts
+.jest-test-results.json
+coverage
+stats.html

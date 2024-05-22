@@ -1,0 +1,486 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+$table-row-main-border: 1px solid $color-inactive;
+$color-loading: #e8e8e8;
+$column-sort-padding-right: 35px;
+
+.datatable {
+  --column-width-min: 10em;
+
+  border-collapse: collapse;
+  width: 100%;
+
+  @include md {
+    margin-top: 12px;
+  }
+
+  caption {
+    @include visually-hidden;
+  }
+
+  // Basic table responsiveness
+  thead,
+  tbody,
+  tfoot {
+    width: 100%;
+  }
+
+  tr {
+    display: grid;
+    text-align: left;
+  }
+
+  th,
+  td {
+    font-weight: normal;
+    box-sizing: border-box;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    min-height: 48px;
+
+    @include md {
+      flex-direction: column;
+      align-items: flex-start;
+      grid-column: 1 /-1;
+      padding: 6px 12px;
+      color: $color-black;
+    }
+  } // End Basic table responsiveness
+
+  // Speical overrides for table layout that overflows horizontally without truncating column headings
+  &__overflow {
+    @include min-md {
+      min-width: 100%;
+
+      thead,
+      tbody,
+      tfoot {
+        width: auto;
+      }
+
+      tr {
+        display: table-row;
+      }
+
+      th,
+      td {
+        box-sizing: border-box;
+        display: table-cell;
+        padding-bottom: 12px;
+        padding-top: 12px;
+      }
+
+      .datatableHeader th {
+        display: table-cell;
+
+        &.datatableRTL {
+          text-align: right;
+        }
+
+        &.datatableRTL a:hover {
+          padding-left: unset;
+        }
+
+        a {
+          overflow: visible;
+        }
+
+        a:hover {
+          display: inline-block;
+          padding-right: 35px;
+        }
+
+        a:hover::after {
+          margin-right: unset;
+        }
+      }
+
+      .datatableHeader__main {
+        left: -1px;
+        position: relative;
+      }
+
+      .datatableBody {
+        &:not(.datatableBody__main) tr + tr {
+          border-top: 6px solid transparent;
+        }
+
+        .datatableRTL .datatableCellValue {
+          display: block;
+          text-align: right;
+        }
+      }
+
+      .datatableLoading td {
+        height: 52px;
+      }
+    }
+  }
+
+  &__selectable {
+    @include md {
+      td,
+      th {
+        grid-column: 2 /-1;
+      }
+    }
+  }
+
+  &__actionable {
+    @include md {
+      td,
+      th {
+        grid-column: 1;
+      }
+    }
+  }
+
+  &Header {
+    th {
+      display: flex;
+      align-items: center;
+      padding: 12px 24px;
+      text-transform: uppercase;
+
+      a {
+        text-decoration: none;
+        margin: 0;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        position: relative;
+        $padding-hover: 12px;
+
+        &:hover {
+          overflow: visible;
+          display: block;
+          z-index: 10;
+          background: $color-white;
+          padding-right: $column-sort-padding-right + $padding-hover;
+        }
+
+        &:hover::after {
+          margin-right: $padding-hover;
+        }
+      }
+    }
+
+    @include md {
+      display: none;
+    }
+
+    &__main,
+    &__blue,
+    &__cobalt {
+      @include font-style(base);
+
+      color: $color-white;
+
+      a {
+        color: $color-white;
+
+        &::after {
+          filter: invert(100%) sepia(8%) saturate(34%) hue-rotate(315deg) brightness(107%) contrast(107%);
+        }
+
+        &:hover {
+          background: $color-blue !important;
+        }
+      }
+
+      th {
+        font-weight: normal;
+        text-transform: uppercase;
+      }
+    }
+
+    &__main,
+    &__blue {
+      background: $color-blue;
+    }
+
+    &__cobalt {
+      background: $color-cobalt;
+    }
+  }
+
+  &Columnsort {
+    position: relative;
+    display: inline-block;
+    padding-right: 35px;
+
+    &::after {
+      content: '';
+      background: url('../../images/icons/icon-chevron-bottom.svg') center center;
+      transform: rotate(180deg);
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    &__desc {
+      &::after {
+        transform: rotate(0);
+      }
+    }
+
+    &__sorted {
+      &::after {
+        filter: invert(15%) sepia(93%) saturate(6059%) hue-rotate(358deg) brightness(93%) contrast(100%);
+      }
+    }
+  }
+
+  &Body {
+    tr {
+      margin-bottom: 6px;
+      background: $color-light-grey;
+    }
+
+    th,
+    td {
+      @include font-style(no2);
+
+      line-height: 1.4;
+
+      a {
+        @include font-style(no2);
+
+        line-height: 1.4;
+        display: flex;
+        align-items: center;
+        margin: 0;
+      }
+
+      button {
+        display: flex;
+        align-items: center;
+      }
+
+      img {
+        width: 24px;
+        height: 24px;
+      }
+
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    &__main {
+      tr {
+        margin-bottom: 0;
+
+        &:first-child {
+          border-top: $table-row-main-border;
+        }
+
+        &:last-child {
+          border-bottom: $table-row-main-border;
+        }
+      }
+
+      tr:nth-of-type(odd) {
+        background: $color-white;
+      }
+
+      td,
+      th {
+        border-right: $table-row-main-border;
+
+        @include md {
+          border-left: $table-row-main-border;
+        }
+
+        &:first-child {
+          border-left: $table-row-main-border;
+        }
+      }
+    }
+  }
+
+  &RowHeader {
+    @include font-style(no3);
+
+    color: $color-black-solid;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    @include min-md {
+      display: none;
+    }
+
+    &__hidden {
+      display: none;
+    }
+  }
+
+  &CheckboxRow {
+    @include md {
+      grid-template-columns: 50px auto !important;
+    }
+  }
+
+  &StandardRow {
+    @include md {
+      grid-template-columns: auto 50px !important;
+    }
+  }
+
+  &CheckboxCell {
+    @include md {
+      display: flex;
+      align-items: center !important;
+      padding-top: 12px !important;
+      grid-column: 1 !important; // Override custom JSX template styles
+      grid-row: 1 / span var(--column-count);
+      border-right: none !important;
+    }
+  }
+
+  &RowClickable {
+    &:hover {
+      th,
+      td {
+        background-color: rgb(235 235 235 / 70%);
+        cursor: pointer;
+      }
+    }
+  }
+
+  &RTL {
+    justify-content: right;
+
+    .datatableColumnsort {
+      &:hover {
+        padding-right: $column-sort-padding-right !important;
+        padding-left: 30px;
+      }
+
+      &:hover::after {
+        margin-right: 0 !important;
+      }
+    }
+
+    @include md {
+      justify-content: left;
+    }
+  }
+
+  &SortDropdown {
+    @include min-md {
+      display: none;
+    }
+  }
+
+  &CellOverflowNormal {
+    td,
+    th {
+      white-space: normal;
+      padding: 12px 24px;
+      align-items: center;
+
+      @include md {
+        align-items: flex-start;
+        padding: 6px 12px;
+      }
+    }
+  }
+
+  &RadioButton {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    margin: 0;
+  }
+
+  &Loading {
+    td {
+      position: relative;
+      overflow: hidden;
+
+      &::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        transform: translateX(-100%);
+        background-image:
+        linear-gradient(
+          90deg,
+          rgba($color-loading, 0) 0,
+          rgba($color-loading, 0.2) 20%,
+          rgba($color-loading, 0.5) 60%,
+          rgba($color-loading, 0)
+        );
+        animation: shimmer 2s infinite;
+        content: '';
+      }
+    }
+  }
+
+  &CellAction {
+    @include md {
+      grid-column: var(--action-column) !important;
+      grid-row: calc(var(--column-count) - 1);
+      border-right: none !important;
+    }
+  }
+
+  &SelectAll {
+    display: none;
+    margin-top: 12px;
+    padding: 15px;
+    background: $color-light-grey;
+    gap: 12px;
+
+    @include md {
+      display: flex;
+    }
+
+    label {
+      @include font-style(base);
+    }
+
+    &__blue {
+      background: $color-blue;
+
+      label {
+        color: $color-white;
+      }
+    }
+
+    &__cobalt {
+      background: $color-cobalt;
+
+      label {
+        color: $color-white;
+      }
+    }
+  }
+
+  &CellValue {
+    box-sizing: border-box;
+    padding-top: 1px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.overflowWrapper {
+  @include min-md {
+    overflow: auto;
+  }
+}

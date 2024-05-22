@@ -1,0 +1,116 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+$carousel-arrow-size: 50px;
+$carousel-indicator-size: 5px;
+
+.carousel {
+  /* stylelint-disable */
+  :global {
+    .splide__slide {
+      display: block;
+      opacity: 0.5;
+      transition: opacity 200ms ease-in-out;
+    }
+
+    .splide__slide.is-active {
+      opacity: unset;
+    }
+
+    .splide__pagination {
+      margin-top: 45px;
+      padding-left: 0;
+    }
+
+    .splide__pagination__page {
+      background-color: $color-black-30;
+      border: 0 none;
+      border-radius: 50%;
+      cursor: pointer;
+      height: $carousel-indicator-size;
+      margin: 4px;
+      padding: 0;
+      width: $carousel-indicator-size;
+    }
+
+    .splide__pagination__page.is-active {
+      background-color: $color-black;
+    }
+  }
+  /* stylelint-enable */
+}
+
+.arrow {
+  &Prev,
+  &Next {
+    align-items: center;
+    background-color: $color-white;
+    border: 1px solid $color-light-grey;
+    color: $color-black-solid;
+    cursor: pointer;
+    display: flex;
+    height: $carousel-arrow-size;
+    justify-content: center;
+    padding: 0;
+    position: absolute;
+    top: calc(50% - $carousel-arrow-size);
+    user-select: none;
+    width: $carousel-arrow-size;
+
+    &:hover {
+      box-shadow: 0 0 14px rgb(0 0 0 / 25%);
+    }
+  }
+
+  &Prev img {
+    rotate: 180deg;
+  }
+
+  &Next {
+    right: 0;
+  }
+
+  &Container__noShow {
+    .arrowPrev,
+    .arrowNext {
+      background-color: transparent;
+      border: 0 none;
+
+      &:hover {
+        box-shadow: none;
+      }
+
+      img {
+        opacity: 0;
+      }
+
+      &:focus-visible img {
+        opacity: 1;
+      }
+
+      @include min-md {
+        height: calc(100% - 70px);
+        width: 10vw;
+        top: 5px;
+        z-index: 1;
+      }
+
+      @include min-xl {
+        width: 15vw;
+      }
+    }
+  }
+
+  @include sm {
+    &Container {
+      visibility: hidden;
+    }
+  }
+
+  // try to target touch input devices
+  @media (hover: none) and (pointer: none) {
+    &Container {
+      visibility: hidden;
+    }
+  }
+}

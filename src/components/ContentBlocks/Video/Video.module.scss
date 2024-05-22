@@ -1,0 +1,72 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+$video-play-icon-size-sm: 50px;
+$video-play-icon-size-md: 112px;
+
+@mixin playIconPosition($size) {
+  width: $size;
+  height: $size;
+  margin-left: calc($size / -2); /* half of the width */
+  margin-top: calc($size / -2); /* half of the height */
+}
+
+.feature {
+  background-color: var(--background-light);
+  overflow: hidden;
+
+  .mediaContainer {
+    position: relative;
+    cursor: pointer;
+
+    .stillImage {
+      display: block;
+      height: auto;
+      width: 100%;
+    }
+
+    .playIcon,
+    .playIconButton {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      content: url('../../../images/icons/icon-play.svg');
+
+      @include playIconPosition($video-play-icon-size-md);
+
+      @include sm {
+        @include playIconPosition($video-play-icon-size-sm);
+      }
+    }
+
+    .playIconButton {
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+  }
+
+  .videoContainer {
+    height: auto;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+
+  .containerTextInner {
+    padding: $content-gutter-lg;
+
+    .heading {
+      @include font-style(h2);
+
+      margin-top: 0;
+    }
+  }
+}
+
+@include sm {
+  .feature {
+    .containerTextInner {
+      padding: $content-gutter-sm $spacing-m;
+    }
+  }
+}

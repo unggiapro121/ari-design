@@ -1,0 +1,75 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+@mixin inverted($color) {
+  background: $color-white;
+  border-color: $color-white;
+
+  &:checked::after {
+    mask-image: url('../../images/checkbox-selected.svg');
+    mask-position: center;
+    mask-size: cover;
+    background: $color !important;
+  }
+}
+
+.checkbox {
+  @include base-checkbox;
+
+  &__blue {
+    &Inverted {
+      @include inverted($color-blue);
+    }
+
+    &:checked {
+      background-color: $color-blue;
+      border-color: $color-blue;
+    }
+  }
+
+  &__red {
+    &Inverted {
+      @include inverted($color-red);
+    }
+
+    &:checked {
+      background-color: $color-red;
+      border-color: $color-red;
+    }
+  }
+
+  &__black {
+    &Inverted {
+      @include inverted($color-black);
+    }
+
+    &:checked {
+      background-color: $color-black;
+      border-color: $color-black;
+    }
+  }
+
+  &__cobalt {
+    &Inverted {
+      @include inverted($color-cobalt);
+    }
+
+    &:checked {
+      background-color: $color-cobalt;
+      border-color: $color-cobalt;
+    }
+  }
+
+  &__error {
+    border-color: $color-red;
+
+    &:checked {
+      background-color: $color-red;
+      border-color: $color-red;
+    }
+  }
+
+  &:checked {
+    @include base-checkbox-checked;
+  }
+}
