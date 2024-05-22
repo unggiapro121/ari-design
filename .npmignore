@@ -1,0 +1,16 @@
+*
+**
+!lib/**
+!lib
+!dist/**
+!dist
+!linting/**
+!linting/
+!assets/**
+!package.json
+!README.md
+!src/styles/**
+!src/images/**
+!cli
+!cli/**
+!tailwind.preset.config.js
