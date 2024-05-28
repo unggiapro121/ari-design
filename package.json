@@ -1,9 +1,16 @@
 {
-  "name": "@ampol/design-system",
+  "name": "@unggiapro121/ari-design",
   "version": "1.10.0",
   "main": "lib/index.js",
   "module": "lib/index.mjs",
   "types": "lib/src/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/unggiapro121/ari-design"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/unggiapro121"
+  },
   "scripts": {
     "start": "storybook dev",
     "dev": "npm-run-all --parallel storybook",
@@ -46,6 +53,7 @@
     "@changesets/cli": "^2.27.1",
     "@radix-ui/react-select": "^2.0.0",
     "@splidejs/react-splide": "^0.7.12",
+    "@unggiapro121/ari-design": "^1.10.0",
     "babel-plugin-react-data-testid": "^0.2.0",
     "class-variance-authority": "^0.4.0",
     "clsx": "^1.2.1",
@@ -175,5 +183,8 @@
   },
   "stylelint": {
     "extends": "./linting/stylelint-config-react.js"
-  }
+  },
+  "description": "Hosted and managed here is all of Ampol's central react components.",
+  "author": "",
+  "license": "ISC"
 }

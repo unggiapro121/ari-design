@@ -13,3 +13,4 @@ src/index.ts
 .jest-test-results.json
 coverage
 stats.html
+.npmrc

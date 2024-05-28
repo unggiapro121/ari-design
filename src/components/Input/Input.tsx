@@ -85,11 +85,11 @@ export interface InputProps
   /**
    * Min value
    */
-  min?: string;
+  min?: string | number;
   /**
    * Max value
    */
-  max?: string;
+  max?: string | number ;
 }
 
 export enum InputType {

@@ -15,7 +15,7 @@ import filterObjectProperties from '../../util/filterObjectProperties';
 import FormAutocomplete from './Fields/FormAutocomplete';
 import FormCheckbox from './Fields/FormCheckbox';
 import FormCondition from './Fields/FormCondition';
-import FormDatePicker from './Fields/FormDatePicker';
+// import FormDatePicker from './Fields/FormDatePicker';
 import FormDropDown from './Fields/FormDropDown';
 import FormDropdownSearch from './Fields/FormDropdownSearch';
 import FormFileUpload from './Fields/FormFile';
@@ -277,7 +277,7 @@ const Form = ({ memoizeDefaultValues = true, ...props }: FormProps) => {
   );
 };
 
-Form.DatePicker = FormDatePicker;
+// Form.DatePicker = FormDatePicker;
 Form.Condition = FormCondition;
 Form.RadioGroup = FormRadioGroup;
 Form.Toggle = FormToggle;

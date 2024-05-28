@@ -10,7 +10,7 @@ export interface TableProps {
   children?: any,
 }
 
-export interface DataTableProps {
+export interface TableComponentProps {
   caption: string;
   columns: string[] | TableColumn[];
   data?: any[];
@@ -57,7 +57,7 @@ const Table = ({
   showAccent,
   showHeading = false,
   tableOverflow,
-}: DataTableProps) => {
+}: TableComponentProps) => {
   return (
     <div 
       className={clsx(styles.table, inset && styles.table__inset)} 
